@@ -235,10 +235,9 @@ def main():
             channel = client.get_channel(1083988375108866048)
             for msg in log_messages:
                 await channel.send(f"***{msg}***")
-        else:
-            # send logs to log channel
-            channel = client.get_channel(1083988375108866048)
-            await channel.send(f"***No data found at {time}***")
+
+        channel = client.get_channel(1083988375108866048)
+        await channel.send(f"***No data found at {time}***")
 
         await client.close()
 
