@@ -1,20 +1,19 @@
 import os
 import logging
+import random
 import requests
-import jdatetime
 
 import sys
 sys.dont_write_bytecode = True
 
-# Django specific settings
+
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings')
+
 import discord
 import django
+import jdatetime
 from dotenv import load_dotenv
-
-django.setup()
-
 
 from db.models import Programs
 from datahandler import Data
@@ -29,10 +28,22 @@ logging.basicConfig(filename='debug.log',
 
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
 
+django.setup()
+
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
 log_messages = []
+
+USER_AGENTS = [
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; rv:84.0) Gecko/20100101 Firefox/84.0',
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
+    'Mozilla/5.0 (X11; Linux x86_64; rv:84.0) Gecko/20100101 Firefox/84.0',
+    'Mozilla/5.0 (Linux; Android 10; SM-G975F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Mobile Safari/537.36',
+]
 
 def bugcrowd() -> list:
     """
@@ -44,7 +55,7 @@ def bugcrowd() -> list:
     page: int = 0
     while True:
         url = f'https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]={page}'
-        r = requests.get(url, timeout=10)
+        r = requests.get(url, timeout=10, headers={'User-Agent': random.choice(USER_AGENTS)})
         logging.info(f'Request send to - {url}')
         page += 1
         try:
@@ -85,7 +96,8 @@ def intigriti() -> list:
 
     headers = {
         "accept": "application/json",
-        "authorization": "Bearer 0855A112E633BD46EC3C04A206C67DCA673744694B693083E18F40C6CB366324-1"
+        "authorization": "Bearer 0855A112E633BD46EC3C04A206C67DCA673744694B693083E18F40C6CB366324-1",
+        "User-Agent": random.choice(USER_AGENTS)
     }
 
     response = requests.get(url, headers=headers)
@@ -134,7 +146,8 @@ def hackerone() -> list:
     while True:
 
         headers = {
-            'Accept': 'application/json'
+            'Accept': 'application/json',
+            'User-Agent': random.choice(USER_AGENTS)
         }
         url = f'https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D={page}'
         r = requests.get(
