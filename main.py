@@ -11,6 +11,8 @@ import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings')
 import discord
 import django
+from dotenv import load_dotenv
+
 django.setup()
 
 
@@ -27,7 +29,7 @@ logging.basicConfig(filename='debug.log',
 
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
 
-
+load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
 log_messages = []
