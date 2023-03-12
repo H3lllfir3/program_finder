@@ -14,6 +14,8 @@ import discord
 import django
 import jdatetime
 from dotenv import load_dotenv
+django.setup()
+
 
 from db.models import Programs
 from datahandler import Data
@@ -28,7 +30,6 @@ logging.basicConfig(filename='debug.log',
 
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
 
-django.setup()
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -207,16 +208,17 @@ def main():
         lst += hackerone_lst
 
     # Flatting data to one list
-    print('Data flattening...')
-    lst = [i for j in lst for i in j]
+    # logging.info('Data flattening...')
+    # lst = [i for j in lst for i in j]
 
     client = discord.Client(intents=discord.Intents.default())
 
-    print('Sending data to discord...')
+    logging.info('Sending data to discord...')
+
     @client.event
     async def on_ready():
 
-        print('Bot is ready!')
+        logging.info('Bot is ready!')
 
         channel = client.get_channel(1077715462957310144)
         time = jdatetime.datetime.now().strftime("%a, %d %b %Y %H:%M")
@@ -224,6 +226,7 @@ def main():
         if lst:
             await channel.send(f"***New program added at {time}***")
             for data in lst:
+                logging.info(f"Sending data to discord - {data}")
                 msg = f"""
                     ***Platform***: {data['platform']}
                     ***Name***: {data['program_name']}
@@ -235,12 +238,12 @@ def main():
             channel = client.get_channel(1083988375108866048)
             for msg in log_messages:
                 await channel.send(f"***{msg}***")
-
-        channel = client.get_channel(1083988375108866048)
-        await channel.send(f"***No data found at {time}***")
+    
+        if not lst:
+            channel = client.get_channel(1083988375108866048)
+            await channel.send(f"***No data found at {time}***")
 
         await client.close()
-
 
 
     client.run(TOKEN, log_handler=handler, log_level=logging.DEBUG)

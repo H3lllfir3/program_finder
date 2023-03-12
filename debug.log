@@ -3388,3 +3388,467 @@ UnboundLocalError: local variable 'data' referenced before assignment
 01:13:55,609 discord.gateway DEBUG Received WSMessage(type=<WSMsgType.CLOSING: 256>, data=None, extra=None)
 01:13:55,610 discord.gateway DEBUG Websocket closed with 1000, cannot reconnect.
 01:13:55,610 discord.client DEBUG Dispatching event disconnect
+16:59:43,50 root INFO Program started at Sat, 20 Esf 1401
+16:59:43,51 root INFO Bugcrowd started at Sat, 20 Esf 1401
+16:59:43,52 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+16:59:45,379 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=0 HTTP/1.1" 200 None
+16:59:45,384 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=0
+16:59:45,390 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+16:59:47,647 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=1 HTTP/1.1" 200 None
+16:59:47,651 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=1
+16:59:47,656 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+16:59:50,204 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=2 HTTP/1.1" 200 None
+16:59:50,207 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=2
+16:59:50,211 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+16:59:52,769 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=3 HTTP/1.1" 200 None
+16:59:53,60 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=3
+16:59:53,65 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+16:59:55,167 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=4 HTTP/1.1" 200 None
+16:59:55,180 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=4
+16:59:55,184 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+16:59:59,966 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=5 HTTP/1.1" 200 None
+16:59:59,970 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=5
+16:59:59,974 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+17:00:05,685 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=6 HTTP/1.1" 200 None
+17:00:05,730 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=6
+17:00:05,735 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+17:00:08,475 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=7 HTTP/1.1" 200 None
+17:00:08,670 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=7
+17:00:08,674 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+17:00:16,7 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=8 HTTP/1.1" 200 None
+17:00:16,382 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=8
+17:00:16,387 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+17:00:20,528 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=9 HTTP/1.1" 200 None
+17:00:20,578 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=9
+17:00:20,583 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+17:00:22,774 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=10 HTTP/1.1" 200 None
+17:00:22,797 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=10
+17:00:22,800 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+17:00:24,818 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=11 HTTP/1.1" 200 None
+17:00:24,821 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=11
+17:00:24,822 root INFO The last page of the programs is - 12
+17:00:24,839 root INFO Bugcrowd finished with results.
+17:00:24,839 root INFO Intigriti started at Sat, 20 Esf 1401
+17:00:24,839 root INFO Intigriti function runs.
+17:00:24,840 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.intigriti.com:443
+17:00:26,397 urllib3.connectionpool DEBUG https://api.intigriti.com:443 "GET /core/researcher/program HTTP/1.1" 401 0
+17:00:26,399 root INFO Request send to - https://api.intigriti.com/core/researcher/program
+17:00:26,400 root ERROR Error while intigriti functions runs
+17:00:26,400 root INFO Intigiriti finished with results.
+17:00:26,400 root INFO Hackerone started at Sat, 20 Esf 1401
+17:00:26,402 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:00:28,609 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=0 HTTP/1.1" 200 None
+17:00:28,612 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=0
+17:00:28,616 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:00:31,270 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=1 HTTP/1.1" 200 None
+17:00:31,273 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=1
+17:00:31,276 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:00:33,425 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=2 HTTP/1.1" 200 None
+17:00:33,429 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=2
+17:00:33,432 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:00:36,506 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=3 HTTP/1.1" 200 None
+17:00:36,698 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=3
+17:00:36,701 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:00:39,740 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=4 HTTP/1.1" 200 None
+17:00:39,744 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=4
+17:00:39,747 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:00:42,637 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=5 HTTP/1.1" 200 None
+17:00:42,640 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=5
+17:00:42,643 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:00:45,735 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=6 HTTP/1.1" 200 None
+17:00:45,739 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=6
+17:00:45,742 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:00:50,223 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=7 HTTP/1.1" 200 None
+17:00:50,270 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=7
+17:00:50,273 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:00:52,774 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=8 HTTP/1.1" 200 None
+17:00:52,819 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=8
+17:00:52,821 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:00:54,923 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=9 HTTP/1.1" 200 None
+17:00:54,975 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=9
+17:00:54,978 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:00:56,875 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=10 HTTP/1.1" 200 None
+17:00:56,879 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=10
+17:00:56,881 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:00:58,972 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=11 HTTP/1.1" 200 None
+17:00:59,23 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=11
+17:00:59,27 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:01:00,830 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=12 HTTP/1.1" 200 None
+17:01:00,836 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=12
+17:01:00,842 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:01:03,114 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=13 HTTP/1.1" 200 None
+17:01:03,158 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=13
+17:01:03,161 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:01:04,945 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=14 HTTP/1.1" 200 None
+17:01:04,948 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=14
+17:01:04,952 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:01:07,313 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=15 HTTP/1.1" 200 None
+17:01:07,316 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=15
+17:01:07,319 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:01:09,231 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=16 HTTP/1.1" 200 None
+17:01:09,237 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=16
+17:01:09,240 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:01:11,212 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=17 HTTP/1.1" 200 None
+17:01:11,215 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=17
+17:01:11,216 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:01:12,842 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=18 HTTP/1.1" 200 None
+17:01:12,846 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=18
+17:01:12,849 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:01:14,649 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=19 HTTP/1.1" 200 None
+17:01:14,663 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=19
+17:01:14,666 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:01:16,968 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=20 HTTP/1.1" 200 None
+17:01:17,11 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=20
+17:01:17,14 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+17:01:18,403 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=21 HTTP/1.1" 200 None
+17:01:18,446 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=21
+17:01:18,447 root WARNING Data doesn't exist at - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=21
+17:01:18,466 root INFO Hackerone finished with results.
+17:01:18,466 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+17:01:18,467 root INFO Sending data to discord...
+17:01:18,467 discord.client DEBUG on_ready has successfully been registered as an event
+17:01:18,467 asyncio DEBUG Using selector: EpollSelector
+17:01:18,467 discord.client INFO logging in using static token
+17:01:19,905 discord.http DEBUG GET https://discord.com/api/v10/users/@me with None has returned 200
+17:01:19,906 discord.http DEBUG GET /users/@me has found its initial rate limit bucket hash (f7ead6a7674e5a323d93786263b66cb1).
+17:01:19,907 discord.http DEBUG GET https://discord.com/api/v10/users/@me has received {'id': '1077714110952783982', 'username': 'Bounty Program List', 'display_name': None, 'avatar': None, 'avatar_decoration': None, 'discriminator': '9853', 'public_flags': 0, 'flags': 0, 'bot': True, 'banner': None, 'banner_color': None, 'accent_color': None, 'bio': '', 'locale': 'en-US', 'mfa_enabled': False, 'premium_type': 0, 'email': None, 'verified': True}
+17:01:20,830 discord.http DEBUG GET https://discord.com/api/v10/oauth2/applications/@me with None has returned 200
+17:01:20,831 discord.http DEBUG GET /oauth2/applications/@me has found its initial rate limit bucket hash (f7ead6a7674e5a323d93786263b66cb1).
+17:01:20,831 discord.http DEBUG GET https://discord.com/api/v10/oauth2/applications/@me has received {'id': '1077714110952783982', 'name': 'Bounty program list', 'icon': None, 'description': '', 'summary': '', 'type': None, 'hook': True, 'bot_public': True, 'bot_require_code_grant': False, 'verify_key': '9354a21aa8f4cca8f67ab842cdb13ceab1d57b0c3a803c6c5135c94223e226e3', 'owner': {'id': '688767880208056350', 'username': 'H3llf!r3', 'display_name': None, 'avatar': '2afcfd4479e2efb28e2039f1e210ff23', 'avatar_decoration': None, 'discriminator': '5377', 'public_flags': 0, 'flags': 0}, 'flags': 0, 'team': None}
+17:01:22,455 discord.gateway DEBUG Created websocket connected to wss://gateway.discord.gg/
+17:01:22,455 discord.gateway DEBUG For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 10, 'd': {'heartbeat_interval': 41250, '_trace': ['["gateway-prd-us-east1-b-lx6q",{"micros":0.0}]']}}
+17:01:22,456 discord.gateway DEBUG Shard ID None has sent the IDENTIFY payload.
+17:01:22,877 discord.gateway DEBUG For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+17:01:23,92 discord.gateway DEBUG For Shard ID None: WebSocket Event: {'t': 'READY', 's': 1, 'op': 0, 'd': {'v': 10, 'user_settings': {}, 'user': {'verified': True, 'username': 'Bounty Program List', 'mfa_enabled': False, 'id': '1077714110952783982', 'flags': 0, 'email': None, 'display_name': None, 'discriminator': '9853', 'bot': True, 'avatar': None}, 'session_type': 'normal', 'session_id': '7f064008fb21e5a70dc9947778e7d55b', 'resume_gateway_url': 'wss://gateway-us-east1-b.discord.gg', 'relationships': [], 'private_channels': [], 'presences': [], 'guilds': [{'unavailable': True, 'id': '1077715462198145106'}], 'guild_join_requests': [], 'geo_ordered_rtc_regions': ['rotterdam', 'frankfurt', 'milan', 'madrid', 'stockholm'], 'disclose': [], 'application': {'id': '1077714110952783982', 'flags': 0}, '_trace': ['["gateway-prd-us-east1-b-lx6q",{"micros":144167,"calls":["id_created",{"micros":2854,"calls":[]},"session_lookup_time",{"micros":347,"calls":[]},"session_lookup_finished",{"micros":21,"calls":[]},"discord-sessions-blue-prd-2-298",{"micros":139962,"calls":["start_session",{"micros":89955,"calls":["discord-api-549686bf77-wwcn6",{"micros":85164,"calls":["get_user",{"micros":29518},"get_guilds",{"micros":7241},"send_scheduled_deletion_message",{"micros":10},"guild_join_requests",{"micros":1179},"authorized_ip_coro",{"micros":11}]}]},"starting_guild_connect",{"micros":62,"calls":[]},"presence_started",{"micros":41084,"calls":[]},"guilds_started",{"micros":110,"calls":[]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":8700,"calls":[]},"connect_finished",{"micros":8707,"calls":[]},"build_ready",{"micros":20,"calls":[]},"clean_ready",{"micros":1,"calls":[]},"optimize_ready",{"micros":20,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}]']}}
+17:01:23,92 discord.client DEBUG Dispatching event socket_event_type
+17:01:23,92 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 7f064008fb21e5a70dc9947778e7d55b).
+17:01:23,93 discord.client DEBUG Dispatching event connect
+17:01:23,93 discord.gateway DEBUG For Shard ID None: WebSocket Event: {'t': 'GUILD_CREATE', 's': 2, 'op': 0, 'd': {'application_id': None, 'application_command_counts': {}, 'guild_scheduled_events': [], 'description': None, 'members': [{'user': {'username': 'Bounty Program List', 'public_flags': 0, 'id': '1077714110952783982', 'display_name': None, 'discriminator': '9853', 'bot': True, 'avatar_decoration': None, 'avatar': None}, 'roles': ['1077716697231917180'], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2023-02-21T22:21:23.731000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'avatar': None}], 'rules_channel_id': None, 'splash': None, 'system_channel_id': '1077715462957310144', 'hub_type': None, 'presences': [], 'premium_progress_bar_enabled': False, 'afk_timeout': 300, 'vanity_url_code': None, 'mfa_level': 0, 'id': '1077715462198145106', 'embedded_activities': [], 'default_message_notifications': 0, 'owner_id': '688767880208056350', 'member_count': 2, 'emojis': [], 'nsfw_level': 0, 'safety_alerts_channel_id': None, 'stickers': [], 'banner': None, 'premium_subscription_count': 0, 'voice_states': [], 'threads': [], 'lazy': True, 'max_stage_video_channel_users': 50, 'unavailable': False, 'joined_at': '2023-02-21T22:21:23.731000+00:00', 'roles': [{'version': 1677017789344, 'unicode_emoji': None, 'tags': {}, 'position': 0, 'permissions': '1071698660929', 'name': '@everyone', 'mentionable': False, 'managed': False, 'id': '1077715462198145106', 'icon': None, 'hoist': False, 'flags': 0, 'color': 0}, {'version': 1677018083711, 'unicode_emoji': None, 'tags': {'bot_id': '1077714110952783982'}, 'position': 1, 'permissions': '8', 'name': 'Bounty program list', 'mentionable': False, 'managed': True, 'id': '1077716697231917180', 'icon': None, 'hoist': False, 'flags': 0, 'color': 0}], 'premium_tier': 0, 'public_updates_channel_id': None, 'home_header': None, 'channels': [{'version': 1677017789367, 'type': 4, 'position': 0, 'permission_overwrites': [], 'name': 'Text Channels', 'id': '1077715462957310142', 'flags': 0}, {'version': 1677017789381, 'type': 4, 'position': 0, 'permission_overwrites': [], 'name': 'Voice Channels', 'id': '1077715462957310143', 'flags': 0}, {'version': 1677354458088, 'type': 0, 'topic': None, 'rate_limit_per_user': 0, 'position': 0, 'permission_overwrites': [], 'parent_id': '1077715462957310142', 'name': 'new-projects', 'last_message_id': '1083815719046758430', 'id': '1077715462957310144', 'flags': 0}, {'version': 1677017789431, 'user_limit': 0, 'type': 2, 'rtc_region': None, 'rate_limit_per_user': 0, 'position': 0, 'permission_overwrites': [], 'parent_id': '1077715462957310143', 'name': 'General', 'last_message_id': None, 'id': '1077715462957310145', 'flags': 0, 'bitrate': 64000}, {'version': 1677354442929, 'type': 0, 'topic': None, 'rate_limit_per_user': 0, 'position': 1, 'permission_overwrites': [], 'parent_id': '1077715462957310142', 'name': 'subdomains', 'last_message_id': None, 'id': '1079127490351616140', 'flags': 0}, {'version': 1678513368157, 'type': 0, 'topic': None, 'rate_limit_per_user': 0, 'position': 2, 'permission_overwrites': [], 'parent_id': '1077715462957310142', 'name': 'new-projects_logs', 'last_message_id': '1084249587105136774', 'id': '1083988375108866048', 'flags': 0}], 'verification_level': 0, 'preferred_locale': 'en-US', 'region': 'deprecated', 'discovery_splash': None, 'large': False, 'features': ['APPLICATION_COMMAND_PERMISSIONS_V2'], 'explicit_content_filter': 0, 'max_video_channel_users': 25, 'stage_instances': [], 'latest_onboarding_question_id': None, 'system_channel_flags': 0, 'max_members': 500000, 'name': "H3llf!r3's server", 'afk_channel_id': None, 'guild_hashes': {'version': 1, 'roles': {'omitted': False, 'hash': 'e2X7yg'}, 'metadata': {'omitted': False, 'hash': '6K/2fw'}, 'channels': {'omitted': False, 'hash': 'MKDiBQ'}}, 'nsfw': False, 'icon': '3e9234206ed569ed528fa58c4da2bad1'}}
+17:01:23,94 discord.client DEBUG Dispatching event socket_event_type
+17:01:23,94 discord.client DEBUG Dispatching event guild_available
+17:01:25,97 discord.client DEBUG Dispatching event ready
+17:01:25,97 root INFO Bot is ready!
+17:01:25,562 discord.http DEBUG POST https://discord.com/api/v10/channels/1083988375108866048/messages with {"content":"***Data doesn't exist at - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=21***","components":[],"tts":false} has returned 200
+17:01:25,562 discord.http DEBUG POST /channels/{channel_id}/messages has found its initial rate limit bucket hash (1d3c67957bcdccc6709861c232df8529).
+17:01:25,562 discord.http DEBUG POST https://discord.com/api/v10/channels/1083988375108866048/messages has received {'id': '1084249751911927900', 'type': 0, 'content': "***Data doesn't exist at - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=21***", 'channel_id': '1083988375108866048', 'author': {'id': '1077714110952783982', 'username': 'Bounty Program List', 'display_name': None, 'avatar': None, 'avatar_decoration': None, 'discriminator': '9853', 'public_flags': 0, 'bot': True}, 'attachments': [], 'embeds': [], 'mentions': [], 'mention_roles': [], 'pinned': False, 'mention_everyone': False, 'tts': False, 'timestamp': '2023-03-11T23:01:25.242000+00:00', 'edited_timestamp': None, 'flags': 0, 'components': [], 'referenced_message': None}
+17:01:25,564 discord.gateway DEBUG For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 3, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2023-03-11T23:01:25.242000+00:00', 'referenced_message': None, 'pinned': False, 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'member': {'roles': ['1077716697231917180'], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2023-02-21T22:21:23.731000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'avatar': None}, 'id': '1084249751911927900', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': "***Data doesn't exist at - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=21***", 'components': [], 'channel_id': '1083988375108866048', 'author': {'username': 'Bounty Program List', 'public_flags': 0, 'id': '1077714110952783982', 'display_name': None, 'discriminator': '9853', 'bot': True, 'avatar_decoration': None, 'avatar': None}, 'attachments': [], 'guild_id': '1077715462198145106'}}
+17:01:25,564 discord.client DEBUG Dispatching event socket_event_type
+17:01:25,564 discord.client DEBUG Dispatching event message
+17:01:26,258 discord.http DEBUG POST https://discord.com/api/v10/channels/1083988375108866048/messages with {"content":"***No data found at Sat, 20 Esf 1401 17:01***","components":[],"tts":false} has returned 200
+17:01:26,259 discord.http DEBUG POST https://discord.com/api/v10/channels/1083988375108866048/messages has received {'id': '1084249754650820698', 'type': 0, 'content': '***No data found at Sat, 20 Esf 1401 17:01***', 'channel_id': '1083988375108866048', 'author': {'id': '1077714110952783982', 'username': 'Bounty Program List', 'display_name': None, 'avatar': None, 'avatar_decoration': None, 'discriminator': '9853', 'public_flags': 0, 'bot': True}, 'attachments': [], 'embeds': [], 'mentions': [], 'mention_roles': [], 'pinned': False, 'mention_everyone': False, 'tts': False, 'timestamp': '2023-03-11T23:01:25.895000+00:00', 'edited_timestamp': None, 'flags': 0, 'components': [], 'referenced_message': None}
+17:01:26,260 discord.gateway DEBUG Received WSMessage(type=<WSMsgType.CLOSING: 256>, data=None, extra=None)
+17:01:26,260 discord.gateway DEBUG Websocket closed with 1000, cannot reconnect.
+17:01:26,260 discord.client DEBUG Dispatching event disconnect
+01:23:28,468 root INFO Program started at Sun, 21 Esf 1401
+01:23:28,469 root INFO Bugcrowd started at Sun, 21 Esf 1401
+01:23:28,470 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:31,830 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=0 HTTP/1.1" 403 None
+01:23:31,832 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=0
+01:23:31,835 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:32,438 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=1 HTTP/1.1" 403 None
+01:23:32,441 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=1
+01:23:32,443 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:33,47 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=2 HTTP/1.1" 403 None
+01:23:33,50 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=2
+01:23:33,52 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:33,759 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=3 HTTP/1.1" 403 None
+01:23:33,761 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=3
+01:23:33,764 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:34,369 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=4 HTTP/1.1" 403 None
+01:23:34,371 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=4
+01:23:34,374 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:34,957 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=5 HTTP/1.1" 403 None
+01:23:34,959 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=5
+01:23:34,962 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:35,488 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=6 HTTP/1.1" 403 None
+01:23:35,491 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=6
+01:23:35,492 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:36,99 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=7 HTTP/1.1" 403 None
+01:23:36,102 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=7
+01:23:36,104 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:36,712 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=8 HTTP/1.1" 403 None
+01:23:36,715 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=8
+01:23:36,717 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:37,324 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=9 HTTP/1.1" 403 None
+01:23:37,327 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=9
+01:23:37,363 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:37,938 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=10 HTTP/1.1" 403 None
+01:23:37,940 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=10
+01:23:37,942 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:38,548 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=11 HTTP/1.1" 403 None
+01:23:38,550 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=11
+01:23:38,553 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:39,57 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=12 HTTP/1.1" 403 None
+01:23:39,60 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=12
+01:23:39,62 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:39,613 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=13 HTTP/1.1" 403 None
+01:23:39,615 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=13
+01:23:39,618 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:40,180 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=14 HTTP/1.1" 403 None
+01:23:40,182 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=14
+01:23:40,184 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:40,791 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=15 HTTP/1.1" 403 None
+01:23:40,793 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=15
+01:23:40,796 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:41,404 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=16 HTTP/1.1" 403 None
+01:23:41,406 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=16
+01:23:41,409 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:42,17 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=17 HTTP/1.1" 403 None
+01:23:42,19 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=17
+01:23:42,22 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:42,630 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=18 HTTP/1.1" 403 None
+01:23:42,633 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=18
+01:23:42,669 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:43,345 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=19 HTTP/1.1" 403 None
+01:23:43,347 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=19
+01:23:43,349 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:43,958 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=20 HTTP/1.1" 403 None
+01:23:43,961 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=20
+01:23:43,963 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:45,696 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=21 HTTP/1.1" 403 None
+01:23:45,699 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=21
+01:23:45,701 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:46,210 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=22 HTTP/1.1" 403 None
+01:23:46,212 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=22
+01:23:46,215 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:46,924 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=23 HTTP/1.1" 403 None
+01:23:46,926 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=23
+01:23:46,927 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:48,253 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=24 HTTP/1.1" 403 None
+01:23:48,256 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=24
+01:23:48,258 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:48,664 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=25 HTTP/1.1" 403 None
+01:23:48,667 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=25
+01:23:48,670 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:49,72 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=26 HTTP/1.1" 403 None
+01:23:49,74 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=26
+01:23:49,77 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:49,511 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=27 HTTP/1.1" 403 None
+01:23:49,514 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=27
+01:23:49,517 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:50,513 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=28 HTTP/1.1" 403 None
+01:23:50,516 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=28
+01:23:50,519 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:52,48 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=29 HTTP/1.1" 403 None
+01:23:52,51 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=29
+01:23:52,53 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:53,888 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=30 HTTP/1.1" 403 None
+01:23:53,891 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=30
+01:23:53,893 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:54,493 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=31 HTTP/1.1" 403 None
+01:23:54,496 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=31
+01:23:54,498 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:55,106 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=32 HTTP/1.1" 403 None
+01:23:55,109 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=32
+01:23:55,111 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:55,720 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=33 HTTP/1.1" 403 None
+01:23:55,723 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=33
+01:23:55,725 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:56,332 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=34 HTTP/1.1" 403 None
+01:23:56,334 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=34
+01:23:56,336 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:57,559 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=35 HTTP/1.1" 403 None
+01:23:57,562 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=35
+01:23:57,564 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:58,36 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=36 HTTP/1.1" 403 None
+01:23:58,38 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=36
+01:23:58,40 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:23:59,781 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=37 HTTP/1.1" 403 None
+01:23:59,784 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=37
+01:23:59,785 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:00,318 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=38 HTTP/1.1" 403 None
+01:24:00,850 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=38
+01:24:00,852 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:01,441 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=39 HTTP/1.1" 403 None
+01:24:01,442 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=39
+01:24:01,443 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:02,55 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=40 HTTP/1.1" 403 None
+01:24:02,260 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=40
+01:24:02,263 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:02,800 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=41 HTTP/1.1" 403 None
+01:24:02,802 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=41
+01:24:02,803 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:03,588 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=42 HTTP/1.1" 403 None
+01:24:03,590 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=42
+01:24:03,593 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:04,201 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=43 HTTP/1.1" 403 None
+01:24:04,204 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=43
+01:24:04,205 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:05,735 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=44 HTTP/1.1" 403 None
+01:24:06,553 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=44
+01:24:06,556 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:08,598 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=45 HTTP/1.1" 403 None
+01:24:08,600 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=45
+01:24:08,602 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:09,212 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=46 HTTP/1.1" 403 None
+01:24:09,214 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=46
+01:24:09,216 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:09,825 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=47 HTTP/1.1" 403 None
+01:24:09,827 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=47
+01:24:09,830 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:10,440 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=48 HTTP/1.1" 403 None
+01:24:10,443 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=48
+01:24:10,445 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:10,976 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=49 HTTP/1.1" 403 None
+01:24:10,979 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=49
+01:24:10,981 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:11,462 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=50 HTTP/1.1" 403 None
+01:24:11,465 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=50
+01:24:11,467 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:12,282 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=51 HTTP/1.1" 403 None
+01:24:12,284 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=51
+01:24:12,287 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:33,627 root INFO Program started at Sun, 21 Esf 1401
+01:24:33,627 root INFO Bugcrowd started at Sun, 21 Esf 1401
+01:24:33,628 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:36,538 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=0 HTTP/1.1" 200 None
+01:24:36,544 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=0
+01:24:36,548 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:38,683 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=1 HTTP/1.1" 200 None
+01:24:38,687 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=1
+01:24:38,691 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:41,308 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=2 HTTP/1.1" 200 None
+01:24:41,432 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=2
+01:24:41,434 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:43,385 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=3 HTTP/1.1" 200 None
+01:24:43,633 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=3
+01:24:43,635 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:46,851 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=4 HTTP/1.1" 200 None
+01:24:46,967 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=4
+01:24:46,969 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:53,14 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=5 HTTP/1.1" 200 None
+01:24:53,22 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=5
+01:24:53,25 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:55,486 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=6 HTTP/1.1" 200 None
+01:24:55,560 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=6
+01:24:55,564 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:24:57,840 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=7 HTTP/1.1" 200 None
+01:24:57,932 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=7
+01:24:57,934 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:25:00,619 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=8 HTTP/1.1" 200 None
+01:25:00,623 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=8
+01:25:00,627 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:25:02,371 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=9 HTTP/1.1" 200 None
+01:25:02,374 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=9
+01:25:02,376 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:25:03,326 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=10 HTTP/1.1" 200 None
+01:25:03,329 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=10
+01:25:03,331 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+01:25:04,785 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=11 HTTP/1.1" 200 None
+01:25:04,787 root INFO Request send to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=11
+01:25:04,821 root INFO The last page of the programs is - 12
+01:25:04,841 root INFO Bugcrowd finished with results.
+01:25:04,841 root INFO Intigriti started at Sun, 21 Esf 1401
+01:25:04,841 root INFO Intigriti function runs.
+01:25:04,842 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.intigriti.com:443
+01:25:05,487 urllib3.connectionpool DEBUG https://api.intigriti.com:443 "GET /core/researcher/program HTTP/1.1" 401 0
+01:25:05,488 root INFO Request send to - https://api.intigriti.com/core/researcher/program
+01:25:05,488 root ERROR Error while intigriti functions runs
+01:25:05,488 root INFO Intigiriti finished with results.
+01:25:05,488 root INFO Hackerone started at Sun, 21 Esf 1401
+01:25:05,489 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:06,768 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=0 HTTP/1.1" 200 None
+01:25:06,967 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=0
+01:25:06,970 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:08,221 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=1 HTTP/1.1" 200 None
+01:25:08,324 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=1
+01:25:08,326 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:09,531 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=2 HTTP/1.1" 200 None
+01:25:09,736 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=2
+01:25:09,739 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:11,172 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=3 HTTP/1.1" 200 None
+01:25:11,386 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=3
+01:25:11,390 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:12,505 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=4 HTTP/1.1" 200 None
+01:25:12,507 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=4
+01:25:12,510 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:13,633 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=5 HTTP/1.1" 200 None
+01:25:13,675 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=5
+01:25:13,678 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:14,864 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=6 HTTP/1.1" 200 None
+01:25:15,79 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=6
+01:25:15,82 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:16,464 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=7 HTTP/1.1" 200 None
+01:25:16,607 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=7
+01:25:16,610 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:17,737 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=8 HTTP/1.1" 200 None
+01:25:17,859 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=8
+01:25:17,860 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:19,21 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=9 HTTP/1.1" 200 None
+01:25:19,71 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=9
+01:25:19,73 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:20,502 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=10 HTTP/1.1" 200 None
+01:25:20,625 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=10
+01:25:20,626 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:22,346 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=11 HTTP/1.1" 200 None
+01:25:22,349 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=11
+01:25:22,351 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:23,625 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=12 HTTP/1.1" 200 None
+01:25:23,748 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=12
+01:25:23,751 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:25,437 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=13 HTTP/1.1" 200 None
+01:25:25,439 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=13
+01:25:25,442 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:26,641 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=14 HTTP/1.1" 200 None
+01:25:26,711 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=14
+01:25:26,714 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:28,349 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=15 HTTP/1.1" 200 None
+01:25:28,496 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=15
+01:25:28,499 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:30,39 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=16 HTTP/1.1" 200 None
+01:25:30,161 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=16
+01:25:30,163 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:31,428 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=17 HTTP/1.1" 200 None
+01:25:31,550 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=17
+01:25:31,552 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:33,106 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=18 HTTP/1.1" 200 None
+01:25:33,227 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=18
+01:25:33,230 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:34,540 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=19 HTTP/1.1" 200 None
+01:25:34,543 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=19
+01:25:34,546 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:36,78 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=20 HTTP/1.1" 200 None
+01:25:36,122 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=20
+01:25:36,125 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+01:25:37,32 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=21 HTTP/1.1" 200 None
+01:25:37,34 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=21
+01:25:37,34 root WARNING Data doesn't exist at - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=21
+01:25:37,46 root INFO Hackerone finished with results.
+01:25:37,46 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
+01:25:37,46 root INFO Sending data to discord...
+01:25:37,46 discord.client DEBUG on_ready has successfully been registered as an event
+01:25:37,46 asyncio DEBUG Using selector: EpollSelector
+01:25:37,47 discord.client INFO logging in using static token
+01:25:37,819 discord.http DEBUG GET https://discord.com/api/v10/users/@me with None has returned 200
+01:25:37,819 discord.http DEBUG GET /users/@me has found its initial rate limit bucket hash (f7ead6a7674e5a323d93786263b66cb1).
+01:25:37,819 discord.http DEBUG GET https://discord.com/api/v10/users/@me has received {'id': '1077714110952783982', 'username': 'Bounty Program List', 'display_name': None, 'avatar': None, 'avatar_decoration': None, 'discriminator': '9853', 'public_flags': 0, 'flags': 0, 'bot': True, 'banner': None, 'banner_color': None, 'accent_color': None, 'bio': '', 'locale': 'en-US', 'mfa_enabled': False, 'premium_type': 0, 'email': None, 'verified': True}
+01:25:38,98 discord.http DEBUG GET https://discord.com/api/v10/oauth2/applications/@me with None has returned 200
+01:25:38,98 discord.http DEBUG GET /oauth2/applications/@me has found its initial rate limit bucket hash (f7ead6a7674e5a323d93786263b66cb1).
+01:25:38,98 discord.http DEBUG GET https://discord.com/api/v10/oauth2/applications/@me has received {'id': '1077714110952783982', 'name': 'Bounty program list', 'icon': None, 'description': '', 'summary': '', 'type': None, 'hook': True, 'bot_public': True, 'bot_require_code_grant': False, 'verify_key': '9354a21aa8f4cca8f67ab842cdb13ceab1d57b0c3a803c6c5135c94223e226e3', 'owner': {'id': '688767880208056350', 'username': 'H3llf!r3', 'display_name': None, 'avatar': '2afcfd4479e2efb28e2039f1e210ff23', 'avatar_decoration': None, 'discriminator': '5377', 'public_flags': 0, 'flags': 0}, 'flags': 0, 'team': None}
+01:25:38,741 discord.gateway DEBUG Created websocket connected to wss://gateway.discord.gg/
+01:25:38,741 discord.gateway DEBUG For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 10, 'd': {'heartbeat_interval': 41250, '_trace': ['["gateway-prd-us-east1-c-8dgb",{"micros":0.0}]']}}
+01:25:38,742 discord.gateway DEBUG Shard ID None has sent the IDENTIFY payload.
+01:25:38,959 discord.gateway DEBUG For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+01:25:39,68 discord.gateway DEBUG For Shard ID None: WebSocket Event: {'t': 'READY', 's': 1, 'op': 0, 'd': {'v': 10, 'user_settings': {}, 'user': {'verified': True, 'username': 'Bounty Program List', 'mfa_enabled': False, 'id': '1077714110952783982', 'flags': 0, 'email': None, 'display_name': None, 'discriminator': '9853', 'bot': True, 'avatar': None}, 'session_type': 'normal', 'session_id': '6a1ef31882746fc454e343f93f60ed93', 'resume_gateway_url': 'wss://gateway-us-east1-c.discord.gg', 'relationships': [], 'private_channels': [], 'presences': [], 'guilds': [{'unavailable': True, 'id': '1077715462198145106'}], 'guild_join_requests': [], 'geo_ordered_rtc_regions': ['rotterdam', 'frankfurt', 'milan', 'madrid', 'stockholm'], 'disclose': [], 'application': {'id': '1077714110952783982', 'flags': 0}, '_trace': ['["gateway-prd-us-east1-c-8dgb",{"micros":95851,"calls":["id_created",{"micros":1142,"calls":[]},"session_lookup_time",{"micros":13509,"calls":[]},"session_lookup_finished",{"micros":14,"calls":[]},"discord-sessions-blue-prd-2-278",{"micros":74905,"calls":["start_session",{"micros":44403,"calls":["discord-api-55bd554db9-w4qj5",{"micros":36468,"calls":["get_user",{"micros":9169},"get_guilds",{"micros":4000},"send_scheduled_deletion_message",{"micros":12},"guild_join_requests",{"micros":532},"authorized_ip_coro",{"micros":15}]}]},"starting_guild_connect",{"micros":54,"calls":[]},"presence_started",{"micros":317,"calls":[]},"guilds_started",{"micros":81,"calls":[]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":29992,"calls":[]},"connect_finished",{"micros":29997,"calls":[]},"build_ready",{"micros":22,"calls":[]},"clean_ready",{"micros":1,"calls":[]},"optimize_ready",{"micros":28,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}]']}}
+01:25:39,68 discord.client DEBUG Dispatching event socket_event_type
+01:25:39,68 discord.gateway INFO Shard ID None has connected to Gateway (Session ID: 6a1ef31882746fc454e343f93f60ed93).
+01:25:39,68 discord.client DEBUG Dispatching event connect
+01:25:39,132 discord.gateway DEBUG For Shard ID None: WebSocket Event: {'t': 'GUILD_CREATE', 's': 2, 'op': 0, 'd': {'channels': [{'version': 1677017789367, 'type': 4, 'position': 0, 'permission_overwrites': [], 'name': 'Text Channels', 'id': '1077715462957310142', 'flags': 0}, {'version': 1677017789381, 'type': 4, 'position': 0, 'permission_overwrites': [], 'name': 'Voice Channels', 'id': '1077715462957310143', 'flags': 0}, {'version': 1677354458088, 'type': 0, 'topic': None, 'rate_limit_per_user': 0, 'position': 0, 'permission_overwrites': [], 'parent_id': '1077715462957310142', 'name': 'new-projects', 'last_message_id': '1083815719046758430', 'id': '1077715462957310144', 'flags': 0}, {'version': 1677017789431, 'user_limit': 0, 'type': 2, 'rtc_region': None, 'rate_limit_per_user': 0, 'position': 0, 'permission_overwrites': [], 'parent_id': '1077715462957310143', 'name': 'General', 'last_message_id': None, 'id': '1077715462957310145', 'flags': 0, 'bitrate': 64000}, {'version': 1677354442929, 'type': 0, 'topic': None, 'rate_limit_per_user': 0, 'position': 1, 'permission_overwrites': [], 'parent_id': '1077715462957310142', 'name': 'subdomains', 'last_message_id': None, 'id': '1079127490351616140', 'flags': 0}, {'version': 1678513368157, 'type': 0, 'topic': None, 'rate_limit_per_user': 0, 'position': 2, 'permission_overwrites': [], 'parent_id': '1077715462957310142', 'name': 'new-projects_logs', 'last_message_id': '1084370377549037578', 'id': '1083988375108866048', 'flags': 0}], 'application_command_counts': {}, 'description': None, 'verification_level': 0, 'max_video_channel_users': 25, 'premium_tier': 0, 'afk_channel_id': None, 'max_members': 500000, 'public_updates_channel_id': None, 'banner': None, 'latest_onboarding_question_id': None, 'premium_progress_bar_enabled': False, 'system_channel_id': '1077715462957310144', 'unavailable': False, 'explicit_content_filter': 0, 'id': '1077715462198145106', 'max_stage_video_channel_users': 50, 'safety_alerts_channel_id': None, 'large': False, 'lazy': True, 'system_channel_flags': 0, 'presences': [], 'premium_subscription_count': 0, 'joined_at': '2023-02-21T22:21:23.731000+00:00', 'stickers': [], 'threads': [], 'region': 'deprecated', 'owner_id': '688767880208056350', 'emojis': [], 'hub_type': None, 'embedded_activities': [], 'mfa_level': 0, 'guild_scheduled_events': [], 'discovery_splash': None, 'guild_hashes': {'version': 1, 'roles': {'omitted': False, 'hash': 'e2X7yg'}, 'metadata': {'omitted': False, 'hash': '6K/2fw'}, 'channels': {'omitted': False, 'hash': 'MKDiBQ'}}, 'rules_channel_id': None, 'vanity_url_code': None, 'stage_instances': [], 'roles': [{'version': 1677017789344, 'unicode_emoji': None, 'tags': {}, 'position': 0, 'permissions': '1071698660929', 'name': '@everyone', 'mentionable': False, 'managed': False, 'id': '1077715462198145106', 'icon': None, 'hoist': False, 'flags': 0, 'color': 0}, {'version': 1677018083711, 'unicode_emoji': None, 'tags': {'bot_id': '1077714110952783982'}, 'position': 1, 'permissions': '8', 'name': 'Bounty program list', 'mentionable': False, 'managed': True, 'id': '1077716697231917180', 'icon': None, 'hoist': False, 'flags': 0, 'color': 0}], 'nsfw_level': 0, 'voice_states': [], 'member_count': 2, 'default_message_notifications': 0, 'preferred_locale': 'en-US', 'features': ['APPLICATION_COMMAND_PERMISSIONS_V2'], 'application_id': None, 'afk_timeout': 300, 'members': [{'user': {'username': 'Bounty Program List', 'public_flags': 0, 'id': '1077714110952783982', 'display_name': None, 'discriminator': '9853', 'bot': True, 'avatar_decoration': None, 'avatar': None}, 'roles': ['1077716697231917180'], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2023-02-21T22:21:23.731000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'avatar': None}], 'splash': None, 'icon': '3e9234206ed569ed528fa58c4da2bad1', 'name': "H3llf!r3's server", 'home_header': None, 'nsfw': False}}
+01:25:39,132 discord.client DEBUG Dispatching event socket_event_type
+01:25:39,132 discord.client DEBUG Dispatching event guild_available
+01:25:41,133 discord.client DEBUG Dispatching event ready
+01:25:41,133 root INFO Bot is ready!
+01:25:41,445 discord.gateway DEBUG For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 3, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2023-03-12T07:25:41.310000+00:00', 'referenced_message': None, 'pinned': False, 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'member': {'roles': ['1077716697231917180'], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2023-02-21T22:21:23.731000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'avatar': None}, 'id': '1084376655058960544', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': "***Data doesn't exist at - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=21***", 'components': [], 'channel_id': '1083988375108866048', 'author': {'username': 'Bounty Program List', 'public_flags': 0, 'id': '1077714110952783982', 'display_name': None, 'discriminator': '9853', 'bot': True, 'avatar_decoration': None, 'avatar': None}, 'attachments': [], 'guild_id': '1077715462198145106'}}
+01:25:41,445 discord.client DEBUG Dispatching event socket_event_type
+01:25:41,446 discord.client DEBUG Dispatching event message
+01:25:41,484 discord.http DEBUG POST https://discord.com/api/v10/channels/1083988375108866048/messages with {"content":"***Data doesn't exist at - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=21***","components":[],"tts":false} has returned 200
+01:25:41,484 discord.http DEBUG POST /channels/{channel_id}/messages has found its initial rate limit bucket hash (1d3c67957bcdccc6709861c232df8529).
+01:25:41,484 discord.http DEBUG POST https://discord.com/api/v10/channels/1083988375108866048/messages has received {'id': '1084376655058960544', 'type': 0, 'content': "***Data doesn't exist at - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=21***", 'channel_id': '1083988375108866048', 'author': {'id': '1077714110952783982', 'username': 'Bounty Program List', 'display_name': None, 'avatar': None, 'avatar_decoration': None, 'discriminator': '9853', 'public_flags': 0, 'bot': True}, 'attachments': [], 'embeds': [], 'mentions': [], 'mention_roles': [], 'pinned': False, 'mention_everyone': False, 'tts': False, 'timestamp': '2023-03-12T07:25:41.310000+00:00', 'edited_timestamp': None, 'flags': 0, 'components': [], 'referenced_message': None}
+01:25:41,915 discord.gateway DEBUG For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 4, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2023-03-12T07:25:41.672000+00:00', 'referenced_message': None, 'pinned': False, 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'member': {'roles': ['1077716697231917180'], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2023-02-21T22:21:23.731000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'avatar': None}, 'id': '1084376656577298452', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': '***No data found at Sun, 21 Esf 1401 01:25***', 'components': [], 'channel_id': '1083988375108866048', 'author': {'username': 'Bounty Program List', 'public_flags': 0, 'id': '1077714110952783982', 'display_name': None, 'discriminator': '9853', 'bot': True, 'avatar_decoration': None, 'avatar': None}, 'attachments': [], 'guild_id': '1077715462198145106'}}
+01:25:41,915 discord.client DEBUG Dispatching event socket_event_type
+01:25:41,915 discord.client DEBUG Dispatching event message
+01:25:41,916 discord.http DEBUG POST https://discord.com/api/v10/channels/1083988375108866048/messages with {"content":"***No data found at Sun, 21 Esf 1401 01:25***","components":[],"tts":false} has returned 200
+01:25:41,916 discord.http DEBUG POST https://discord.com/api/v10/channels/1083988375108866048/messages has received {'id': '1084376656577298452', 'type': 0, 'content': '***No data found at Sun, 21 Esf 1401 01:25***', 'channel_id': '1083988375108866048', 'author': {'id': '1077714110952783982', 'username': 'Bounty Program List', 'display_name': None, 'avatar': None, 'avatar_decoration': None, 'discriminator': '9853', 'public_flags': 0, 'bot': True}, 'attachments': [], 'embeds': [], 'mentions': [], 'mention_roles': [], 'pinned': False, 'mention_everyone': False, 'tts': False, 'timestamp': '2023-03-12T07:25:41.672000+00:00', 'edited_timestamp': None, 'flags': 0, 'components': [], 'referenced_message': None}
+01:25:41,916 discord.gateway DEBUG Received WSMessage(type=<WSMsgType.CLOSING: 256>, data=None, extra=None)
+01:25:41,917 discord.gateway DEBUG Websocket closed with 1000, cannot reconnect.
+01:25:41,917 discord.client DEBUG Dispatching event disconnect
