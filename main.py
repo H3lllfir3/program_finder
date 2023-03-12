@@ -103,13 +103,13 @@ def intigriti() -> list:
 
     response = requests.get(url, headers=headers)
     logging.info(f'Request send to - {url}')
+    lst = []
     try:
         programs_lst = response.json()
         if not programs_lst:
             logging.warning(f"Data doesn't exist at - {url}")
             log_messages.append(f"Data doesn't exist at - {url}")
         
-        lst = []
         
         if programs_lst:
             # list of programs which are already in the database.
@@ -211,7 +211,7 @@ def main():
     # Flatting data to one list
     # logging.info('Data flattening...')
     # lst = [i for j in lst for i in j]
-
+    
     client = discord.Client(intents=discord.Intents.default())
 
     logging.info('Sending data to discord...')
