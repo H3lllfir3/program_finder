@@ -1,5 +1,4 @@
-import os
-import logging
+mport logging
 import random
 import requests
 
@@ -17,10 +16,8 @@ from dotenv import load_dotenv
 django.setup()
 
 
-from db.models import Programs
-from datahandler import Data
-
-
+from db.models import Programs, Program
+from bot import DiscordClient
 
 logging.basicConfig(filename='debug.log',
                     filemode='a',
@@ -29,6 +26,11 @@ logging.basicConfig(filename='debug.log',
                     level=logging.DEBUG)
 
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
+handler.setLevel(logging.DEBUG)
+handler.setFormatter(logging.Formatter('%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s'))
+
+logger = logging.getLogger(__name__)
+logger.addHandler(handler)
 
 
 load_dotenv()
@@ -46,208 +48,249 @@ USER_AGENTS = [
     'Mozilla/5.0 (Linux; Android 10; SM-G975F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Mobile Safari/537.36',
 ]
 
-def bugcrowd() -> list:
-    """
-    Get bugcrowd programs list and retuen 
-    JSON object contains program url and ...
-    program['program_url']
-    """
-    programs = []
-    page: int = 0
-    while True:
-        url = f'https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]={page}'
-        r = requests.get(url, timeout=10, headers={'User-Agent': random.choice(USER_AGENTS)})
-        logging.info(f'Request send to - {url}')
-        page += 1
-        try:
-            if not r.json():
-                logging.warning(f"Data doesn't exist at - {url}")
-                log_messages.append(f'The link you followed has expired. {url}')
+class Program:
+    platform: str
+    program_name: str
+    company_name: str
+    program_url: str
 
-            if not r.json()['programs']:
-                logging.info(f'The last page of the programs is - {page}')
+    def dict(self):
+        return {'platform': self.platform, 'program_name': self.program_name, 'company_name': self.company_name, 'program_url': self.program_url}
+
+
+class BugcrowdPrograms:
+    BASE_URL = 'https://bugcrowd.com/programs.json'
+    PAGE_SIZE = 20
+
+    def __init__(self):
+        self.programs = []
+
+    def get_programs(self) -> List[Program]:
+        """
+        Get bugcrowd programs list and return a list of Program objects
+        containing program url and program information
+        """
+        self._fetch_programs()
+        lst = self._filter_new_programs()
+        self._add_programs_to_db(lst)
+        return lst
+
+    def _fetch_programs(self):
+        page = 0
+        while True:
+            url = f'{self.BASE_URL}?sort[]=promoted-desc&vdp[]=false&page[]={page}'
+            headers = {'User-Agent': random.choice(USER_AGENTS)}
+            try:
+                response = requests.get(url, timeout=10, headers=headers)
+                response.raise_for_status()
+                logging.info(f'Request sent to - {url}')
+                page += 1
+                json_data = response.json()
+                if not json_data['programs']:
+                    logging.info(f'The last page of the programs is - {page}')
+                    break
+                self.programs += json_data['programs']
+            except requests.exceptions.RequestException as e:
+                logging.error(f'Request to {url} failed - {e}')
                 break
-            programs += r.json()['programs']
-        except:
-            pass
-    # list of programs which should be send to the discord.
-    lst = []
-    # list of programs which are already in the database.
-    programs_in_db = Programs.objects.filter(data__platform='Bugcrowd')
-    list_of_programs_in_db = [program.data for program in programs_in_db]
-    for program in programs:
-        url = f'https://bugcrowd.com{program["program_url"]}'
+
+    def _filter_new_programs(self) -> List[Program]:
+        lst = []
+        programs_in_db = Programs.objects.filter(data__platform='Bugcrowd')
+        list_of_programs_in_db = [program.data for program in programs_in_db]
+
+        for program in self.programs:
+            url = f'https://bugcrowd.com{program["program_url"]}'
+            try:
+                program_data = Program(platform='Bugcrowd',
+                                       program_name=program['name'].lower(),
+                                       company_name=program['tagline'].lower(),
+                                       program_url=url)
+                if program_data not in list_of_programs_in_db:
+                    lst.append(program_data)
+            except Exception as e:
+                logging.error(f'Error while parsing data - {e}')
+        return lst
+
+    def _add_programs_to_db(self, lst: List[Program]):
+        Programs.objects.bulk_create([Programs(data=program) for program in lst])
+
+class Intigriti:
+    def __init__(self):
+        self.log_messages = []
+    
+    def get_programs(self) -> List[dict]:
+        """
+        Get intigriti programs list and returns 
+        Json object contains Company name and program URI.
+        """
+        logging.info('Intigriti function runs.')
+        url = "https://api.intigriti.com/core/researcher/program"
+        headers = self._get_headers()
+        response = self._send_request(url, headers)
+        logging.info(f'Request send to - {url}')
+        lst = self._parse_response(response, url)
+        return lst
+
+    def _get_headers(self) -> dict:
+        return {
+            "accept": "application/json",
+            "authorization": "Bearer 0855A112E633BD46EC3C04A206C67DCA673744694B693083E18F40C6CB366324-1",
+            "User-Agent": random.choice(USER_AGENTS)
+        }
+
+    def _send_request(self, url: str, headers: dict) -> requests.Response:
         try:
-            data = Data(platform='Bugcrowd', program_name=program['name'].lower(), company_name=program['tagline'].lower(), program_url=url).dict()
-            if not data in list_of_programs_in_db:
-                Programs.objects.create(data=data)
-                lst.append(data)
-        except Exception as e:
-            logging.error(f'Error while parsing data - {e}')
-    return lst
+            response = requests.get(url, headers=headers)
+            return response
+        except requests.exceptions.RequestException as e:
+            logging.error(f"Error while sending request - {e}")
+            self.log_messages.append(f"Error while sending request - {e}")
+            return None
 
+    def _parse_response(self, response: requests.Response, url: str) -> List[dict]:
+        lst = []
+        try:
+            programs_lst = response.json()
+            if not programs_lst:
+                logging.warning(f"Data doesn't exist at - {url}")
+                self.log_messages.append(f"Data doesn't exist at - {url}")
+            if programs_lst:
+                lst = self._get_new_programs(programs_lst)
+        except:
+            logging.error(f'Error while parsing response - {response}')
+            self.log_messages.append(f'Error while parsing response - {response}')
+        return lst
 
-def intigriti() -> list:
-    """
-    Get intigriti programs list and returns 
-    Json object contains Company name and program URI.
-    """
-    logging.info('Intigriti function runs.')
-    url = "https://api.intigriti.com/core/researcher/program"
+    def _get_new_programs(self, programs_lst: List[dict]) -> List[dict]:
+        lst = []
+        # list of programs which are already in the database.
+        programs_in_db = Programs.objects.filter(data__platform='Intigriti')
+        list_of_programs_in_db = [program.data for program in programs_in_db]
+        for program in programs_lst:
+            try:
+                company_handle = program['companyHandle'].lower()
+                handle = program['handle'].lower()
+                program_url = f'https://app.intigriti.com/programs/{company_handle}/{handle}/detail'
+                data = Data(platform='Intigriti', program_name=handle, company_name=company_handle, program_url=program_url).dict()
 
-    headers = {
-        "accept": "application/json",
-        "authorization": "Bearer 0855A112E633BD46EC3C04A206C67DCA673744694B693083E18F40C6CB366324-1",
-        "User-Agent": random.choice(USER_AGENTS)
-    }
+                if not data in list_of_programs_in_db:
+                    Programs.objects.create(data=data)
+                    lst.append(data)
 
-    response = requests.get(url, headers=headers)
-    logging.info(f'Request send to - {url}')
-    lst = []
-    try:
-        programs_lst = response.json()
-        if not programs_lst:
-            logging.warning(f"Data doesn't exist at - {url}")
-            log_messages.append(f"Data doesn't exist at - {url}")
-        
-        
-        if programs_lst:
-            # list of programs which are already in the database.
-            programs_in_db = Programs.objects.filter(data__platform='Intigriti')
-            list_of_programs_in_db = [program.data for program in programs_in_db]
-            for program in programs_lst:
-                try:
-                    company_handle = program['companyHandle'].lower()
-                    handle = program['handle'].lower()
-                    program_url = f'https://app.intigriti.com/programs/{company_handle}/{handle}/detail'
-                    data = Data(platform='Intigriti', program_name=handle, company_name=company_handle, program_url=program_url).dict()
-
-                    if not data in list_of_programs_in_db:
-                        Programs.objects.create(data=data)
-                        lst.append(data)
-
-                except Exception as e:
-                    logging.error(f'Error while parsing data - {e}')
-                    log_messages.append(f"The form of the data changed {url}")
-
-    except:
-        logging.error(f'Error while intigriti functions runs')
-        
-    return lst
+            except Exception as e:
+                logging.error(f'Error while parsing data - {e}')
+                self.log_messages.append(f"The form of the data changed {url}")
+        return lst
         
     
-            
 
-def hackerone() -> list:
+class HackeroneScraper:
     """
-    Get hackerone programs list and returns 
-    Json object contains Company name and program URI.
+    A class to scrape programs from Hackerone and store them in a database
     """
-    programs = []
-    page: int = 0
-    while True:
+    def __init__(self, user_agents: List[str], username: str, password: str):
+        self.user_agents = user_agents
+        self.username = username
+        self.password = password
 
-        headers = {
-            'Accept': 'application/json',
-            'User-Agent': random.choice(USER_AGENTS)
-        }
-        url = f'https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D={page}'
-        r = requests.get(
-            url,
-            auth=('h3llfir3', 'FbLO2BcOLeGeHZsd7KnlyJ0yk5JLxsoJKTFdAgEvnrw='),
-            headers = headers
-        )
+    def get_programs(self) -> List[Program]:
+        """
+        Get hackerone programs list and returns 
+        Json object contains Company name and program URI.
+        """
+        programs = self._scrape_programs()
+        lst = self._process_programs(programs)
+        return lst
 
-        logging.info(f'Request sended to - {url}')
-        page += 1
-        if not r.json()['data']:
-            
-            logging.warning(f"Data doesn't exist at - {url}")
-            log_messages.append(f"Data doesn't exist at - {url}")
-            break
-        
-        programs += r.json()['data']
+    def _scrape_programs(self) -> List[dict]:
+        """
+        Scrapes programs from Hackerone
+        """
+        programs = []
+        page: int = 0
+        while True:
+            headers = {
+                'Accept': 'application/json',
+                'User-Agent': random.choice(self.user_agents)
+            }
+            url = f'https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D={page}'
+            r = requests.get(
+                url,
+                auth=(self.username, self.password),
+                headers=headers
+            )
+            logging.info(f'Request sent to - {url}')
+            page += 1
+            if not r.json()['data']:
+                logging.warning(f"Data doesn't exist at - {url}")
+                break
+            programs += r.json()['data']
+        return programs
 
-    # list of programs which should be send to the discord.
-    lst = []
-    # get all objects from the database to check if the program is already in the database.
-    programs_in_db = Programs.objects.filter(data__platform='Hackerone')
-    list_of_programs_in_db = [program.data for program in programs_in_db]
-    for program in programs:
-        url = f"https://hackerone.com/{program['attributes']['handle'].lower()}"
-        if program['attributes']['submission_state'] == 'open' and program['attributes']['state'] == 'public_mode':
-            data = Data(platform='Hackerone', program_name=program['attributes']['handle'].lower(), company_name=program['attributes']['name'].lower(), program_url=url).dict()
-            if not data in list_of_programs_in_db:
-                Programs.objects.create(data=data)
-                lst.append(data)
-    return lst
+    def _process_programs(self, programs: List[dict]) -> List[Program]:
+        """
+        Processes scraped programs and returns a list of Program instances
+        """
+        lst = []
+        programs_in_db = Programs.objects.filter(data__platform='Hackerone')
+        list_of_programs_in_db = [program.data for program in programs_in_db]
+        for program in programs:
+            url = f"https://hackerone.com/{program['attributes']['handle'].lower()}"
+            if program['attributes']['submission_state'] == 'open' and program['attributes']['state'] == 'public_mode':
+                data = Program(
+                    platform='Hackerone',
+                    program_name=program['attributes']['handle'].lower(),
+                    company_name=program['attributes']['name'].lower(),
+                    program_url=url
+                )
+                if data not in list_of_programs_in_db:
+                    Programs.objects.create(data=data)
+                    lst.append(data)
+        return lst
 
 
 def main():
-    print('Program started.')
+    # Print start time
     time = jdatetime.datetime.now().strftime("%a, %d %b %Y")
-    logging.info(f'Program started at {time}')
+    print(f'Program started at {time}')
 
-    logging.info(f'Bugcrowd started at {time}')
-    bugcrowd_lst = bugcrowd()
-    logging.info(f'Bugcrowd finished with results.')
+    # Initialize lists
+    bugcrowd_lst = []
+    intigriti_lst = []
+    hackerone_lst = []
 
-    logging.info(f'Intigriti started at {time}')
-    intigriti_lst = intigriti()
-    logging.info(f'Intigiriti finished with results.')
+    # Get data from Bugcrowd
+    print(f'Getting data from Bugcrowd...')
+    try:
+        bugcrowd_lst = get_bugcrowd_programs()
+        print(f'Got {len(bugcrowd_lst)} programs from Bugcrowd')
+    except Exception as e:
+        print(f'Error while getting Bugcrowd data: {str(e)}')
 
-    logging.info(f'Hackerone started at {time}')
-    hackerone_lst = hackerone()
-    logging.info(f'Hackerone finished with results.')
-    
-    lst = []
-    if bugcrowd_lst is not None:
-        lst = bugcrowd_lst 
-    if intigriti_lst is not None:
-        lst += intigriti_lst
-    if hackerone_lst is not None:
-        lst += hackerone_lst
+    # Get data from Intigriti
+    print(f'Getting data from Intigriti...')
+    try:
+        intigriti_lst = get_intigriti_programs()
+        print(f'Got {len(intigriti_lst)} programs from Intigriti')
+    except Exception as e:
+        print(f'Error while getting Intigriti data: {str(e)}')
 
-    # Flatting data to one list
-    # logging.info('Data flattening...')
-    # lst = [i for j in lst for i in j]
-    
-    client = discord.Client(intents=discord.Intents.default())
+    # Get data from Hackerone
+    print(f'Getting data from Hackerone...')
+    try:
+        hackerone_lst = get_hackerone_programs()
+        print(f'Got {len(hackerone_lst)} programs from Hackerone')
+    except Exception as e:
+        print(f'Error while getting Hackerone data: {str(e)}')
 
-    logging.info('Sending data to discord...')
+    # Merge lists
+    lst = bugcrowd_lst + intigriti_lst + hackerone_lst
 
-    @client.event
-    async def on_ready():
+    # Send data to Discord
+    print('Sending data to Discord...')
+    send_data_to_discord(lst)
 
-        logging.info('Bot is ready!')
-
-        channel = client.get_channel(1077715462957310144)
-        time = jdatetime.datetime.now().strftime("%a, %d %b %Y %H:%M")
-
-        if lst:
-            await channel.send(f"***New program added at {time}***")
-            for data in lst:
-                logging.info(f"Sending data to discord - {data}")
-                msg = f"""
-                    ***Platform***: {data['platform']}
-                    ***Name***: {data['program_name']}
-                    ***Company***: {data['company_name']}
-                    ***URL***: {data['program_url']}\n\n
-                """
-                await channel.send(msg)
-        if log_messages:
-            channel = client.get_channel(1083988375108866048)
-            for msg in log_messages:
-                await channel.send(f"***{msg}***")
-    
-        if not lst:
-            channel = client.get_channel(1083988375108866048)
-            await channel.send(f"***No data found at {time}***")
-
-        await client.close()
-
-
-    client.run(TOKEN, log_handler=handler, log_level=logging.DEBUG)
 
 if __name__ == '__main__':
     main()
