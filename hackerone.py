@@ -3,23 +3,15 @@ import logging
 import requests
 
 from typing import List
-from dataclasses import dataclass
 
-@dataclass
-class Program:
-    platform: str
-    program_name: str
-    company_name: str
-    program_url: str
 
 class HackeroneScraper:
     """
     A class to scrape programs from Hackerone and store them in a database
     """
-    def __init__(self, user_agents: List[str], username: str, password: str):
-        self.user_agents = user_agents
+    def __init__(self, username: str, token: str):
         self.username = username
-        self.password = password
+        self.token = token
 
     def get_programs(self) -> List[Program]:
         """
@@ -44,7 +36,7 @@ class HackeroneScraper:
             url = f'https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D={page}'
             r = requests.get(
                 url,
-                auth=(self.username, self.password),
+                auth=(self.username, self.token),
                 headers=headers
             )
             logging.info(f'Request sent to - {url}')
@@ -65,7 +57,7 @@ class HackeroneScraper:
         for program in programs:
             url = f"https://hackerone.com/{program['attributes']['handle'].lower()}"
             if program['attributes']['submission_state'] == 'open' and program['attributes']['state'] == 'public_mode':
-                data = Program(
+                data = ProgramData(
                     platform='Hackerone',
                     program_name=program['attributes']['handle'].lower(),
                     company_name=program['attributes']['name'].lower(),
@@ -77,9 +69,9 @@ class HackeroneScraper:
         return lst
 
 from myapp.models import Programs  # assuming this is the model used to store programs in the database
-from myapp.constants import USER_AGENTS  # assuming this is a list of user agents used to make HTTP requests
+from constants import USER_AGENTS  # assuming this is a list of user agents used to make HTTP requests
 
-scraper = HackeroneScraper(user_agents=USER_AGENTS, username='h3llfir3', password='FbLO2BcOLeGeHZsd7KnlyJ0yk5JLxsoJKTFdAgEvnrw=')
+scraper = HackeroneScraper(user_agents=USER_AGENTS, username='h3llfir3', token='FbLO2BcOLeGeHZsd7KnlyJ0yk5JLxsoJKTFdAgEvnrw=')
 
 programs = scraper.get_programs()
 
