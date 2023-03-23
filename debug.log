@@ -4017,3 +4017,393 @@ UnboundLocalError: local variable 'data' referenced before assignment
 01:46:24,701 root INFO Request sended to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=21
 01:46:24,701 root WARNING Data doesn't exist at - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=21
 01:46:25,340 root INFO Hackerone finished with results.
+19:00:31,789 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:04:16,484 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:09:58,254 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:09:59,597 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=0 HTTP/1.1" 200 None
+19:09:59,800 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=0
+19:09:59,802 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:01,132 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=1 HTTP/1.1" 200 None
+19:10:01,337 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=1
+19:10:01,340 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:03,77 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=2 HTTP/1.1" 200 None
+19:10:03,180 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=2
+19:10:03,183 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:04,511 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=3 HTTP/1.1" 200 None
+19:10:04,514 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=3
+19:10:04,516 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:06,968 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=4 HTTP/1.1" 200 None
+19:10:07,10 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=4
+19:10:07,14 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:08,300 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=5 HTTP/1.1" 200 None
+19:10:08,459 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=5
+19:10:08,462 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:10,40 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=6 HTTP/1.1" 200 None
+19:10:10,290 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=6
+19:10:10,294 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:11,577 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=7 HTTP/1.1" 200 None
+19:10:11,781 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=7
+19:10:11,784 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:12,927 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=8 HTTP/1.1" 200 None
+19:10:12,971 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=8
+19:10:12,973 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:15,265 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=9 HTTP/1.1" 200 None
+19:10:15,267 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=9
+19:10:15,270 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:16,491 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=10 HTTP/1.1" 200 None
+19:10:16,534 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=10
+19:10:16,538 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:17,867 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=11 HTTP/1.1" 200 None
+19:10:17,915 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=11
+19:10:17,918 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:19,257 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=12 HTTP/1.1" 200 None
+19:10:19,259 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=12
+19:10:19,263 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:20,754 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=13 HTTP/1.1" 200 None
+19:10:20,757 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=13
+19:10:20,761 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:22,20 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=14 HTTP/1.1" 200 None
+19:10:22,165 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=14
+19:10:22,168 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:23,864 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=15 HTTP/1.1" 200 None
+19:10:23,907 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=15
+19:10:23,909 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:25,404 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=16 HTTP/1.1" 200 None
+19:10:25,407 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=16
+19:10:25,410 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:26,936 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=17 HTTP/1.1" 200 None
+19:10:27,142 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=17
+19:10:27,145 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:28,779 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=18 HTTP/1.1" 200 None
+19:10:28,984 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=18
+19:10:28,988 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:30,376 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=19 HTTP/1.1" 200 None
+19:10:30,386 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=19
+19:10:30,387 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:31,857 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=20 HTTP/1.1" 200 None
+19:10:31,859 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=20
+19:10:31,862 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:10:32,875 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=21 HTTP/1.1" 200 None
+19:10:32,876 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=21
+19:10:32,877 root WARNING Data doesn't exist at - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=21
+19:13:46,304 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:13:47,536 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=0 HTTP/1.1" 200 None
+19:13:47,842 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=0
+19:13:47,844 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:13:49,72 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=1 HTTP/1.1" 200 None
+19:13:49,115 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=1
+19:13:49,118 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:13:50,506 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=2 HTTP/1.1" 200 None
+19:13:50,620 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=2
+19:13:50,625 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:13:51,736 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=3 HTTP/1.1" 200 None
+19:13:51,779 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=3
+19:13:51,782 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:13:53,270 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=4 HTTP/1.1" 200 None
+19:13:53,474 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=4
+19:13:53,476 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:13:54,908 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=5 HTTP/1.1" 200 None
+19:13:54,954 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=5
+19:13:54,957 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:13:56,142 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=6 HTTP/1.1" 200 None
+19:13:56,341 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=6
+19:13:56,344 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:13:57,687 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=7 HTTP/1.1" 200 None
+19:13:57,918 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=7
+19:13:57,919 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:13:59,209 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=8 HTTP/1.1" 200 None
+19:13:59,250 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=8
+19:13:59,253 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:14:00,745 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=9 HTTP/1.1" 200 None
+19:14:00,949 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=9
+19:14:00,952 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:14:02,896 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=10 HTTP/1.1" 200 None
+19:14:02,898 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=10
+19:14:02,901 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:14:04,331 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=11 HTTP/1.1" 200 None
+19:14:04,534 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=11
+19:14:04,537 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:14:06,278 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=12 HTTP/1.1" 200 None
+19:14:06,280 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=12
+19:14:06,282 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:14:07,986 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=13 HTTP/1.1" 200 None
+19:14:07,989 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=13
+19:14:07,991 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:14:09,961 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=14 HTTP/1.1" 200 None
+19:14:10,78 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=14
+19:14:10,79 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:14:11,702 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=15 HTTP/1.1" 200 None
+19:14:11,906 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=15
+19:14:11,910 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:14:13,647 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=16 HTTP/1.1" 200 None
+19:14:13,743 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=16
+19:14:13,744 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:14:15,801 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=17 HTTP/1.1" 200 None
+19:14:15,915 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=17
+19:14:15,917 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:14:17,334 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=18 HTTP/1.1" 200 None
+19:14:17,539 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=18
+19:14:17,542 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:14:19,177 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=19 HTTP/1.1" 200 None
+19:14:19,180 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=19
+19:14:19,182 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:14:20,406 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=20 HTTP/1.1" 200 None
+19:14:20,408 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=20
+19:14:20,411 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+19:14:21,736 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=21 HTTP/1.1" 200 None
+19:14:21,738 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=21
+19:14:21,739 root WARNING Data doesn't exist at - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=21
+19:43:09,98 root INFO Intigriti function runs.
+19:43:09,99 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.intigriti.com:443
+19:43:10,444 urllib3.connectionpool DEBUG https://api.intigriti.com:443 "GET /core/researcher/program HTTP/1.1" 401 0
+19:43:10,446 root INFO Request send to - https://api.intigriti.com/core/researcher/program
+19:43:10,480 root ERROR Error while parsing response - <Response [401]>: Expecting value: line 1 column 1 (char 0)
+20:05:49,926 root INFO Intigriti function runs.
+20:05:49,927 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.intigriti.com:443
+20:05:52,595 urllib3.connectionpool DEBUG https://api.intigriti.com:443 "GET /core/researcher/program HTTP/1.1" 200 None
+20:05:53,113 root INFO Request send to - https://api.intigriti.com/core/researcher/program
+20:05:53,115 root ERROR Error while parsing response - <Response [200]>: name 'Programs' is not defined
+20:08:19,759 root INFO Intigriti function runs.
+20:08:19,760 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.intigriti.com:443
+20:08:21,170 urllib3.connectionpool DEBUG https://api.intigriti.com:443 "GET /core/researcher/program HTTP/1.1" 200 None
+20:08:21,477 root INFO Request send to - https://api.intigriti.com/core/researcher/program
+20:08:21,479 root ERROR 2Error while parsing response - <Response [200]>: name 'Programs' is not defined
+20:10:05,107 root INFO Intigriti function runs.
+20:10:05,108 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.intigriti.com:443
+20:10:07,971 urllib3.connectionpool DEBUG https://api.intigriti.com:443 "GET /core/researcher/program HTTP/1.1" 200 None
+20:10:08,280 root INFO Request send to - https://api.intigriti.com/core/researcher/program
+20:15:55,34 root INFO Intigriti function runs.
+20:15:55,34 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.intigriti.com:443
+20:15:57,158 urllib3.connectionpool DEBUG https://api.intigriti.com:443 "GET /core/researcher/program HTTP/1.1" 200 None
+20:15:57,553 root INFO Request send to - https://api.intigriti.com/core/researcher/program
+20:18:53,728 root INFO Intigriti function runs.
+20:18:53,729 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.intigriti.com:443
+20:18:55,648 urllib3.connectionpool DEBUG https://api.intigriti.com:443 "GET /core/researcher/program HTTP/1.1" 200 None
+20:18:56,42 root INFO Request send to - https://api.intigriti.com/core/researcher/program
+20:52:25,632 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:52:27,523 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=0 HTTP/1.1" 200 None
+20:52:27,526 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=0
+20:52:27,528 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:52:29,103 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=1 HTTP/1.1" 200 None
+20:52:29,107 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=1
+20:52:29,111 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:52:31,209 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=2 HTTP/1.1" 200 None
+20:52:31,253 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=2
+20:52:31,257 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:52:33,78 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=3 HTTP/1.1" 200 None
+20:52:33,165 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=3
+20:52:33,168 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:52:35,203 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=4 HTTP/1.1" 200 None
+20:52:35,206 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=4
+20:52:35,209 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:52:37,254 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=5 HTTP/1.1" 200 None
+20:52:37,256 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=5
+20:52:37,259 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:52:39,198 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=6 HTTP/1.1" 200 None
+20:52:39,201 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=6
+20:52:39,202 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:52:41,40 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=7 HTTP/1.1" 200 None
+20:52:41,43 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=7
+20:52:41,44 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:52:43,507 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=8 HTTP/1.1" 200 None
+20:52:43,513 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=8
+20:52:43,516 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:52:45,80 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=9 HTTP/1.1" 200 None
+20:52:45,83 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=9
+20:52:45,84 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:52:46,569 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=10 HTTP/1.1" 200 None
+20:52:46,572 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=10
+20:52:46,574 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:52:47,865 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=11 HTTP/1.1" 200 None
+20:52:47,867 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=11
+20:52:47,868 root INFO The last page of the programs is - 12
+20:55:19,622 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:55:21,813 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=0 HTTP/1.1" 200 None
+20:55:21,828 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=0
+20:55:21,832 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:55:24,167 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=1 HTTP/1.1" 200 None
+20:55:24,170 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=1
+20:55:24,173 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:55:25,703 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=2 HTTP/1.1" 200 None
+20:55:25,706 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=2
+20:55:25,709 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:55:27,547 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=3 HTTP/1.1" 200 None
+20:55:27,625 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=3
+20:55:27,629 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:55:29,289 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=4 HTTP/1.1" 200 None
+20:55:29,319 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=4
+20:55:29,322 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:55:31,36 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=5 HTTP/1.1" 200 None
+20:55:31,129 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=5
+20:55:31,130 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:55:33,179 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=6 HTTP/1.1" 200 None
+20:55:33,218 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=6
+20:55:33,220 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:55:35,229 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=7 HTTP/1.1" 200 None
+20:55:35,232 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=7
+20:55:35,233 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:55:37,992 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=8 HTTP/1.1" 200 None
+20:55:37,995 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=8
+20:55:37,998 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:55:39,897 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=9 HTTP/1.1" 200 None
+20:55:39,981 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=9
+20:55:39,982 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:55:41,63 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=10 HTTP/1.1" 200 None
+20:55:41,66 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=10
+20:55:41,68 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+20:55:41,779 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=11 HTTP/1.1" 200 None
+20:55:41,782 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=11
+20:55:41,782 root INFO The last page of the programs is - 12
+21:19:55,726 __main__ INFO Program started at Wed, 02 Far 1402
+21:19:55,727 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:19:57,405 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=0 HTTP/1.1" 200 None
+21:19:57,430 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=0
+21:19:57,433 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:19:59,556 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=1 HTTP/1.1" 200 None
+21:19:59,559 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=1
+21:19:59,562 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:20:01,92 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=2 HTTP/1.1" 200 None
+21:20:01,105 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=2
+21:20:01,108 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:20:03,38 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=3 HTTP/1.1" 200 None
+21:20:03,41 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=3
+21:20:03,43 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:20:04,574 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=4 HTTP/1.1" 200 None
+21:20:04,637 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=4
+21:20:04,641 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:20:06,641 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=5 HTTP/1.1" 200 None
+21:20:06,731 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=5
+21:20:06,734 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:20:08,260 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=6 HTTP/1.1" 200 None
+21:20:08,307 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=6
+21:20:08,309 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:20:09,566 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=7 HTTP/1.1" 200 None
+21:20:09,652 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=7
+21:20:09,654 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:20:12,868 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=8 HTTP/1.1" 200 None
+21:20:12,871 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=8
+21:20:12,873 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:20:14,507 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=9 HTTP/1.1" 200 None
+21:20:14,545 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=9
+21:20:14,548 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:20:15,567 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=10 HTTP/1.1" 200 None
+21:20:15,570 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=10
+21:20:15,571 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:20:16,554 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=11 HTTP/1.1" 200 None
+21:20:16,557 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=11
+21:20:16,557 root INFO The last page of the programs is - 12
+21:20:16,563 root INFO Intigriti function runs.
+21:20:16,564 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.intigriti.com:443
+21:20:17,988 urllib3.connectionpool DEBUG https://api.intigriti.com:443 "GET /core/researcher/program HTTP/1.1" 200 None
+21:20:18,295 root INFO Request send to - https://api.intigriti.com/core/researcher/program
+21:20:18,300 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:20:47,470 __main__ INFO Program started at Wed, 02 Far 1402
+21:20:47,471 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:20:49,119 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=0 HTTP/1.1" 200 None
+21:20:49,179 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=0
+21:20:49,183 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:20:50,757 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=1 HTTP/1.1" 200 None
+21:20:50,815 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=1
+21:20:50,818 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:20:52,395 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=2 HTTP/1.1" 200 None
+21:20:52,452 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=2
+21:20:52,455 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:20:54,33 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=3 HTTP/1.1" 200 None
+21:20:54,36 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=3
+21:20:54,38 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:20:55,672 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=4 HTTP/1.1" 200 None
+21:20:55,685 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=4
+21:20:55,688 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:20:57,719 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=5 HTTP/1.1" 200 None
+21:20:57,720 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=5
+21:20:57,722 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:20:59,562 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=6 HTTP/1.1" 200 None
+21:20:59,809 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=6
+21:20:59,812 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:21:01,715 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=7 HTTP/1.1" 200 None
+21:21:01,718 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=7
+21:21:01,720 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:21:05,400 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=8 HTTP/1.1" 200 None
+21:21:05,434 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=8
+21:21:05,438 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:21:07,347 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=9 HTTP/1.1" 200 None
+21:21:07,550 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=9
+21:21:07,554 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:21:08,888 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=10 HTTP/1.1" 200 None
+21:21:08,891 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=10
+21:21:08,893 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): bugcrowd.com:443
+21:21:09,905 urllib3.connectionpool DEBUG https://bugcrowd.com:443 "GET /programs.json?sort%5B%5D=promoted-desc&vdp%5B%5D=false&page%5B%5D=11 HTTP/1.1" 200 None
+21:21:09,907 root INFO Request sent to - https://bugcrowd.com/programs.json?sort[]=promoted-desc&vdp[]=false&page[]=11
+21:21:09,907 root INFO The last page of the programs is - 12
+21:21:09,912 root INFO Intigriti function runs.
+21:21:09,912 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.intigriti.com:443
+21:21:10,640 urllib3.connectionpool DEBUG https://api.intigriti.com:443 "GET /core/researcher/program HTTP/1.1" 200 None
+21:21:10,827 root INFO Request send to - https://api.intigriti.com/core/researcher/program
+21:21:10,839 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:12,555 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=0 HTTP/1.1" 200 None
+21:21:12,875 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=0
+21:21:12,878 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:14,513 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=1 HTTP/1.1" 200 None
+21:21:14,717 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=1
+21:21:14,720 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:15,946 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=2 HTTP/1.1" 200 None
+21:21:16,59 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=2
+21:21:16,60 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:17,721 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=3 HTTP/1.1" 200 None
+21:21:17,765 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=3
+21:21:17,767 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:19,121 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=4 HTTP/1.1" 200 None
+21:21:19,165 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=4
+21:21:19,168 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:20,453 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=5 HTTP/1.1" 200 None
+21:21:20,455 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=5
+21:21:20,458 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:21,682 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=6 HTTP/1.1" 200 None
+21:21:21,901 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=6
+21:21:21,904 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:23,217 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=7 HTTP/1.1" 200 None
+21:21:23,425 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=7
+21:21:23,428 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:24,754 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=8 HTTP/1.1" 200 None
+21:21:24,964 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=8
+21:21:24,967 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:26,289 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=9 HTTP/1.1" 200 None
+21:21:26,493 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=9
+21:21:26,494 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:27,826 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=10 HTTP/1.1" 200 None
+21:21:28,30 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=10
+21:21:28,32 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:30,488 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=11 HTTP/1.1" 200 None
+21:21:30,537 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=11
+21:21:30,540 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:32,126 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=12 HTTP/1.1" 200 None
+21:21:32,330 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=12
+21:21:32,334 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:34,176 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=13 HTTP/1.1" 200 None
+21:21:34,178 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=13
+21:21:34,180 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:35,506 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=14 HTTP/1.1" 200 None
+21:21:35,508 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=14
+21:21:35,511 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:36,760 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=15 HTTP/1.1" 200 None
+21:21:36,762 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=15
+21:21:36,765 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:38,282 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=16 HTTP/1.1" 200 None
+21:21:38,580 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=16
+21:21:38,584 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:40,421 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=17 HTTP/1.1" 200 None
+21:21:40,729 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=17
+21:21:40,732 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:42,571 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=18 HTTP/1.1" 200 None
+21:21:42,663 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=18
+21:21:42,664 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:43,902 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=19 HTTP/1.1" 200 None
+21:21:44,214 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=19
+21:21:44,217 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:45,643 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=20 HTTP/1.1" 200 None
+21:21:45,645 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=20
+21:21:45,647 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): api.hackerone.com:443
+21:21:46,566 urllib3.connectionpool DEBUG https://api.hackerone.com:443 "GET /v1/hackers/programs?page%5Bnumber%5D=21 HTTP/1.1" 200 None
+21:21:46,568 root INFO Request sent to - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=21
+21:21:46,569 root WARNING Data doesn't exist at - https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D=21
+21:21:46,578 discord.client WARNING PyNaCl is not installed, voice will NOT be supported
