@@ -2,37 +2,28 @@ import requests
 import random
 import logging
 from typing import List
-from dataclasses import dataclass
-from models import Program, Programs
+
+from datahandler import ProgramData
+from db.models import Programs
+from constants import USER_AGENTS
 
 
-@dataclass
-class Program:
-    platform: str
-    program_name: str
-    company_name: str
-    program_url: str
-
-
-
-class BugcrowdPrograms:
-    BASE_URL = 'https://bugcrowd.com/programs.json'
-    PAGE_SIZE = 20
-
+class Bugcrowd:
     def __init__(self):
-        self.programs = []
+        self.BASE_URL = 'https://bugcrowd.com/programs.json'
+        self.PAGE_SIZE = 20
 
-    def get_programs(self) -> List[Program]:
+    def get_programs(self) -> List[Programs]:
         """
         Get bugcrowd programs list and return a list of Program objects
         containing program url and program information
         """
-        self._fetch_programs()
-        lst = self._filter_new_programs()
-        self._add_programs_to_db(lst)
+        programs = self._fetch_programs()
+        lst = self._filter_new_programs(programs)
         return lst
 
-    def _fetch_programs(self):
+    def _fetch_programs(self) -> List:
+        programs = []
         page = 0
         while True:
             url = f'{self.BASE_URL}?sort[]=promoted-desc&vdp[]=false&page[]={page}'
@@ -46,31 +37,28 @@ class BugcrowdPrograms:
                 if not json_data['programs']:
                     logging.info(f'The last page of the programs is - {page}')
                     break
-                self.programs += json_data['programs']
+                programs += json_data['programs']
             except requests.exceptions.RequestException as e:
                 logging.error(f'Request to {url} failed - {e}')
                 break
+        return programs
 
-    def _filter_new_programs(self) -> List[Program]:
+    def _filter_new_programs(self, programs: List) -> List[Programs]:
         lst = []
-        programs_in_db = Programs.objects.filter(data__platform='Bugcrowd')
-        list_of_programs_in_db = [program.data for program in programs_in_db]
+        programs_in_db = Programs.objects.filter(data__platform='Bugcrowd').values_list('data', flat=True)
 
-        for program in self.programs:
+        for program in programs:
             url = f'https://bugcrowd.com{program["program_url"]}'
             try:
-                program_data = Program(platform='Bugcrowd',
+                program_data = ProgramData(platform='Bugcrowd',
                                        program_name=program['name'].lower(),
                                        company_name=program['tagline'].lower(),
-                                       program_url=url)
-                if program_data not in list_of_programs_in_db:
+                                       program_url=url).dict()
+                if program_data not in programs_in_db:
+                    Programs.objects.create(data=program_data)
                     lst.append(program_data)
             except Exception as e:
                 logging.error(f'Error while parsing data - {e}')
         return lst
 
-    def _add_programs_to_db(self, lst: List[Program]):
-        Programs.objects.bulk_create([Programs(data=program) for program in lst])
 
-bugcrowd_programs = BugcrowdPrograms()
-new_programs = bugcrowd_programs.get_programs()
