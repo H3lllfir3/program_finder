@@ -4,6 +4,10 @@ import requests
 
 from typing import List
 
+from constants import USER_AGENTS 
+from db.models import Programs
+from datahandler import ProgramData
+
 
 class HackeroneScraper:
     """
@@ -13,7 +17,7 @@ class HackeroneScraper:
         self.username = username
         self.token = token
 
-    def get_programs(self) -> List[Program]:
+    def get_programs(self) -> List[Programs]:
         """
         Get hackerone programs list and returns 
         Json object contains Company name and program URI.
@@ -31,7 +35,7 @@ class HackeroneScraper:
         while True:
             headers = {
                 'Accept': 'application/json',
-                'User-Agent': random.choice(self.user_agents)
+                'User-Agent': random.choice(USER_AGENTS)
             }
             url = f'https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D={page}'
             r = requests.get(
@@ -47,7 +51,7 @@ class HackeroneScraper:
             programs += r.json()['data']
         return programs
 
-    def _process_programs(self, programs: List[dict]) -> List[Program]:
+    def _process_programs(self, programs: List[dict]) -> List[Programs]:
         """
         Processes scraped programs and returns a list of Program instances
         """
@@ -62,17 +66,8 @@ class HackeroneScraper:
                     program_name=program['attributes']['handle'].lower(),
                     company_name=program['attributes']['name'].lower(),
                     program_url=url
-                )
+                ).dict()
                 if data not in list_of_programs_in_db:
                     Programs.objects.create(data=data)
                     lst.append(data)
         return lst
-
-from myapp.models import Programs  # assuming this is the model used to store programs in the database
-from constants import USER_AGENTS  # assuming this is a list of user agents used to make HTTP requests
-
-scraper = HackeroneScraper(user_agents=USER_AGENTS, username='h3llfir3', token='FbLO2BcOLeGeHZsd7KnlyJ0yk5JLxsoJKTFdAgEvnrw=')
-
-programs = scraper.get_programs()
-
-# Do something with the list of programs returned by the get_programs method
