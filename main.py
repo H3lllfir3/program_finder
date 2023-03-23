@@ -1,23 +1,27 @@
-mport logging
+import logging
 import random
 import requests
 
+from typing import List
+
 import sys
-sys.dont_write_bytecode = True
+sys.dont_write_bytecode = False
 
 
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings')
 
-import discord
+
 import django
 import jdatetime
 from dotenv import load_dotenv
 django.setup()
 
 
-from db.models import Programs, Program
+from db.models import Programs
 from bot import DiscordClient
+from hackerone import HackeroneScraper
+
 
 logging.basicConfig(filename='debug.log',
                     filemode='a',
@@ -38,15 +42,6 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 
 log_messages = []
 
-USER_AGENTS = [
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0',
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; rv:84.0) Gecko/20100101 Firefox/84.0',
-    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
-    'Mozilla/5.0 (X11; Linux x86_64; rv:84.0) Gecko/20100101 Firefox/84.0',
-    'Mozilla/5.0 (Linux; Android 10; SM-G975F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Mobile Safari/537.36',
-]
 
 class Program:
     platform: str
@@ -172,7 +167,7 @@ class Intigriti:
                 company_handle = program['companyHandle'].lower()
                 handle = program['handle'].lower()
                 program_url = f'https://app.intigriti.com/programs/{company_handle}/{handle}/detail'
-                data = Data(platform='Intigriti', program_name=handle, company_name=company_handle, program_url=program_url).dict()
+                data = ProgramData(platform='Intigriti', program_name=handle, company_name=company_handle, program_url=program_url).dict()
 
                 if not data in list_of_programs_in_db:
                     Programs.objects.create(data=data)
@@ -183,113 +178,52 @@ class Intigriti:
                 self.log_messages.append(f"The form of the data changed {url}")
         return lst
         
-    
-
-class HackeroneScraper:
-    """
-    A class to scrape programs from Hackerone and store them in a database
-    """
-    def __init__(self, user_agents: List[str], username: str, password: str):
-        self.user_agents = user_agents
-        self.username = username
-        self.password = password
-
-    def get_programs(self) -> List[Program]:
-        """
-        Get hackerone programs list and returns 
-        Json object contains Company name and program URI.
-        """
-        programs = self._scrape_programs()
-        lst = self._process_programs(programs)
-        return lst
-
-    def _scrape_programs(self) -> List[dict]:
-        """
-        Scrapes programs from Hackerone
-        """
-        programs = []
-        page: int = 0
-        while True:
-            headers = {
-                'Accept': 'application/json',
-                'User-Agent': random.choice(self.user_agents)
-            }
-            url = f'https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D={page}'
-            r = requests.get(
-                url,
-                auth=(self.username, self.password),
-                headers=headers
-            )
-            logging.info(f'Request sent to - {url}')
-            page += 1
-            if not r.json()['data']:
-                logging.warning(f"Data doesn't exist at - {url}")
-                break
-            programs += r.json()['data']
-        return programs
-
-    def _process_programs(self, programs: List[dict]) -> List[Program]:
-        """
-        Processes scraped programs and returns a list of Program instances
-        """
-        lst = []
-        programs_in_db = Programs.objects.filter(data__platform='Hackerone')
-        list_of_programs_in_db = [program.data for program in programs_in_db]
-        for program in programs:
-            url = f"https://hackerone.com/{program['attributes']['handle'].lower()}"
-            if program['attributes']['submission_state'] == 'open' and program['attributes']['state'] == 'public_mode':
-                data = Program(
-                    platform='Hackerone',
-                    program_name=program['attributes']['handle'].lower(),
-                    company_name=program['attributes']['name'].lower(),
-                    program_url=url
-                )
-                if data not in list_of_programs_in_db:
-                    Programs.objects.create(data=data)
-                    lst.append(data)
-        return lst
-
 
 def main():
-    # Print start time
-    time = jdatetime.datetime.now().strftime("%a, %d %b %Y")
-    print(f'Program started at {time}')
+    # # Print start time
+    # time = jdatetime.datetime.now().strftime("%a, %d %b %Y")
+    # print(f'Program started at {time}')
 
-    # Initialize lists
-    bugcrowd_lst = []
-    intigriti_lst = []
-    hackerone_lst = []
+    # # Initialize lists
+    # bugcrowd_lst = []
+    # intigriti_lst = []
+    # hackerone_lst = []
 
-    # Get data from Bugcrowd
-    print(f'Getting data from Bugcrowd...')
-    try:
-        bugcrowd_lst = get_bugcrowd_programs()
-        print(f'Got {len(bugcrowd_lst)} programs from Bugcrowd')
-    except Exception as e:
-        print(f'Error while getting Bugcrowd data: {str(e)}')
+    # # Get data from Bugcrowd
+    # print(f'Getting data from Bugcrowd...')
+    # try:
+    #     bugcrowd_lst = get_bugcrowd_programs()
+    #     print(f'Got {len(bugcrowd_lst)} programs from Bugcrowd')
+    # except Exception as e:
+    #     print(f'Error while getting Bugcrowd data: {str(e)}')
 
-    # Get data from Intigriti
-    print(f'Getting data from Intigriti...')
-    try:
-        intigriti_lst = get_intigriti_programs()
-        print(f'Got {len(intigriti_lst)} programs from Intigriti')
-    except Exception as e:
-        print(f'Error while getting Intigriti data: {str(e)}')
+    # # Get data from Intigriti
+    # print(f'Getting data from Intigriti...')
+    # try:
+    #     intigriti_lst = get_intigriti_programs()
+    #     print(f'Got {len(intigriti_lst)} programs from Intigriti')
+    # except Exception as e:
+    #     print(f'Error while getting Intigriti data: {str(e)}')
 
-    # Get data from Hackerone
-    print(f'Getting data from Hackerone...')
-    try:
-        hackerone_lst = get_hackerone_programs()
-        print(f'Got {len(hackerone_lst)} programs from Hackerone')
-    except Exception as e:
-        print(f'Error while getting Hackerone data: {str(e)}')
+    # # Get data from Hackerone
+    # print(f'Getting data from Hackerone...')
+    # try:
+    #     hackerone_lst = get_hackerone_programs()
+    #     print(f'Got {len(hackerone_lst)} programs from Hackerone')
+    # except Exception as e:
+    #     print(f'Error while getting Hackerone data: {str(e)}')
 
-    # Merge lists
-    lst = bugcrowd_lst + intigriti_lst + hackerone_lst
+    # # Merge lists
+    # lst = bugcrowd_lst + intigriti_lst + hackerone_lst
 
-    # Send data to Discord
-    print('Sending data to Discord...')
-    send_data_to_discord(lst)
+    # # Send data to Discord
+    # print('Sending data to Discord...')
+    # send_data_to_discord(lst)
+    hackerone = HackeroneScraper(token='FbLO2BcOLeGeHZsd7KnlyJ0yk5JLxsoJKTFdAgEvnrw=',username='h3llfir3')
+
+    programs = hackerone.get_programs()
+    print(programs)
+    print('ended.')
 
 
 if __name__ == '__main__':
