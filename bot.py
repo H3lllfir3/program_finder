@@ -2,6 +2,7 @@ import discord
 import logging
 import jdatetime
 
+
 class DiscordClient:
     def __init__(self, token, channel_id, log_handler, log_level=logging.DEBUG):
         self.token = token
@@ -14,16 +15,23 @@ class DiscordClient:
         self.logger.setLevel(self.log_level)
 
     async def send_data_to_discord(self, lst, log_messages=None):
+        print(1)
         self.logger.info('Sending data to discord...')
-        await self.client.start(self.token)
+        print(2)
+        print(self.token)
+        # await self.client.start(self.token)
+        print(3)
 
         @self.client.event
         async def on_ready():
+            print(4)
             self.logger.info('Bot is ready!')
+            print(5)
             channel = self.client.get_channel(self.channel_id)
             time = jdatetime.datetime.now().strftime("%a, %d %b %Y %H:%M")
             if lst:
                 await channel.send(f"***New program added at {time}***")
+            
                 for data in lst:
                     self.logger.info(f"Sending data to discord - {data}")
                     msg = f"""
@@ -33,25 +41,16 @@ class DiscordClient:
                         ***URL***: {data['program_url']}\n\n
                     """
                     await channel.send(msg)
-            if log_messages:
-                log_channel = self.client.get_channel(1083988375108866048)
-                for msg in log_messages:
-                    await log_channel.send(f"***{msg}***")
+            # if log_messages:
+            #     log_channel = self.client.get_channel(1083988375108866048)
+            #     for msg in log_messages:
+            #         await log_channel.send(f"***{msg}***")
 
             if not lst:
                 log_channel = self.client.get_channel(1083988375108866048)
                 await log_channel.send(f"***No data found at {time}***")
 
             await self.client.close()
-
+        print('im at the end.')
         await self.client.run(self.token)
 
-
-token = 'your_discord_bot_token'
-channel_id = 1077715462957310144
-log_handler = logging.StreamHandler()
-log_level = logging.DEBUG
-
-client = DiscordClient(token, channel_id, log_handler, log_level)
-lst = [{'platform': 'Windows', 'program_name': 'Notepad', 'company_name': 'Microsoft', 'program_url': 'https://notepad.com'}]
-client.send_data_to_discord(lst)
