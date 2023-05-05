@@ -12,10 +12,10 @@ RUN apt-get update && apt-get -y install cron vim
 COPY crontab /etc/cron.d/crontab
 
 
-COPY . /app/
-RUN touch /var/log/cron.log
 COPY Pipfile Pipfile.lock /app/
 RUN pip install pipenv && pipenv install --system
+COPY . /app/
+RUN touch /var/log/cron.log
 RUN chmod 0644 /etc/cron.d/crontab
 RUN /usr/bin/crontab /etc/cron.d/crontab
 
