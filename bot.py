@@ -8,7 +8,7 @@ class DiscordWebhook:
             "Content-Type": "application/json"
         }
 
-    def send_message(self, content, username=None, avatar_url=None):
+    def send_message(self, content):
         payload = {
             "content": content
         }
@@ -21,9 +21,9 @@ class DiscordWebhook:
             print(f"Failed to send message. Status code: {response.status_code}")
             print(response.text)
 
-if __name__ == "__main__":
-    webhook_url = "YOUR_WEBHOOK_URL"  # Replace this with your webhook URL
-    message_content = "Hello, Discord!"  # Replace this with the message you want to send
+# if __name__ == "__main__":
+#     webhook_url = "YOUR_WEBHOOK_URL"  # Replace this with your webhook URL
+#     message_content = "Hello, Discord!"  # Replace this with the message you want to send
 
-    discord_webhook = DiscordWebhook(webhook_url)
-    discord_webhook.send_message(message_content, username="MyBot", avatar_url=None)
+#     discord_webhook = DiscordWebhook(webhook_url)
+#     discord_webhook.send_message(message_content, username="MyBot", avatar_url=None)

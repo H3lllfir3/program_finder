@@ -21,7 +21,7 @@ django.setup()
 
 
 from db.models import Programs
-from bot import DiscordClient
+from bot import DiscordWebhook
 from hackerone import HackeroneScraper
 from intigriti import Intigriti
 from bugcrowd import Bugcrowd
@@ -64,45 +64,37 @@ def main():
     
 
     # Send data to Discord
-    client = discord.Client(intents=discord.Intents.default())
+    # client = discord.Client(intents=discord.Intents.default())
 
-    logging.info('Sending data to discord...')
-    log_messages = None
+    # logging.info('Sending data to discord...')
+    # log_messages = None
 
-    @client.event
-    async def on_ready():
+    # @client.event
+    # async def on_ready():
 
-        logging.info('Bot is ready!')
+    #     logging.info('Bot is ready!')
 
-        channel = client.get_channel(1077715462957310144)
-        time = jdatetime.datetime.now().strftime("%a, %d %b %Y %H:%M")
+    #     channel = client.get_channel(1077715462957310144)
+    #     time = jdatetime.datetime.now().strftime("%a, %d %b %Y %H:%M")
+    bot_data = DiscordWebhook('https://discord.com/api/webhooks/1104150221103042590/Fs3Uz2Otib2FhfT7u2QpOqrmE2U78cuREHHZ6HrAtbKweBYBj55J9x33ZAx5Bl9MPaO4')
+    bot_logs = DiscordWebhook('https://discord.com/api/webhooks/1104151546620551179/-b59FL2OUOY1DA7e8AANKTRIlyh27lSnv05ChWF5QQB-3N6XzzI95cXQCtPy6dsUiyqx')
+    if lst:
+        for data in lst:
+            logging.info(f"Sending data to discord - {data}")
+            msg = f"""
+                ***Platform***: {data['platform']}
+                ***Name***: {data['program_name']}
+                ***Company***: {data['company_name']}
+                ***URL***: {data['program_url']}\n\n
+            """
+            bot_data.send_message(message_content)
 
-        if lst:
-        
-            await channel.send(f"***New program added at {time}***")
-            for data in lst:
-            
-                logging.info(f"Sending data to discord - {data}")
-                msg = f"""
-                    ***Platform***: {data['platform']}
-                    ***Name***: {data['program_name']}
-                    ***Company***: {data['company_name']}
-                    ***URL***: {data['program_url']}\n\n
-                """
-                await channel.send(msg)
-        if log_messages:
-            channel = client.get_channel(1083988375108866048)
-            for msg in log_messages:
-                await channel.send(f"***{msg}***")
-    
-        if not lst:
-            channel = client.get_channel(1083988375108866048)
-            await channel.send(f"***No data found at {time}***")
+    if log_messages:
+        for msg in log_messages:
+            bot_logs.send_message(f"***{msg}***")
 
-        await client.close()
-
-
-    client.run(TOKEN, log_handler=handler, log_level=logging.DEBUG)
+    if not lst:
+        bot_logs.send_message("No new programs found!")
 
 
 if __name__ == '__main__':
