@@ -32,8 +32,8 @@ class HackeroneScraper:
         """
         programs = []
         page: int = 0
-        url = f'https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D={page}'
         while True:
+            url = f'https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D={page}'
             headers = {
                 'Accept': 'application/json',
                 'User-Agent': random.choice(USER_AGENTS)
