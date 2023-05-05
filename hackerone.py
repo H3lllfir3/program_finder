@@ -16,6 +16,7 @@ class HackeroneScraper:
     def __init__(self, username: str, token: str):
         self.username = username
         self.token = token
+        self.url = f'https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D={page}'
 
     def get_programs(self) -> List[Programs]:
         """
@@ -37,9 +38,9 @@ class HackeroneScraper:
                 'Accept': 'application/json',
                 'User-Agent': random.choice(USER_AGENTS)
             }
-            url = f'https://api.hackerone.com/v1/hackers/programs?page%5Bnumber%5D={page}'
+            
             r = requests.get(
-                url,
+                self.url,
                 auth=(self.username, self.token),
                 headers=headers
             )
