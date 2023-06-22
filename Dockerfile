@@ -18,6 +18,6 @@ COPY . /app/
 RUN touch /var/log/cron.log
 RUN chmod 0644 /etc/cron.d/crontab
 RUN /usr/bin/crontab /etc/cron.d/crontab
-RUN python app/manage.py makemigrations && python app/manage.py migrate
+RUN python manage.py makemigrations && python manage.py migrate
 
 CMD cron && tail -f /var/log/cron.log
