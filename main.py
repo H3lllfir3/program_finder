@@ -13,9 +13,8 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings')
 
 
 import django
+from django.conf import settings
 import jdatetime
-import discord
-import asyncio
 from dotenv import load_dotenv
 django.setup()
 
@@ -58,44 +57,34 @@ def main():
     hackerone_lst = hackerone.get_programs()
 
 
+    formatted_time = jdatetime.datetime.now().strftime("%a, %d %b %Y %H:%M:%S")
+    webhook = settings.DISCORD
+    discord = DiscordWebhook(webhook)
 
-    # Merge lists
-    lst = bugcrowd_lst + intigriti_lst + hackerone_lst
+    def send_message(lst):
+        if lst:
+            chunk_size = 14  # Number of URLs per message
+            chunks = []
+            if len(lst) > chunk_size:
+                for i in range(0, len(lst), chunk_size):
+                    chunk = lst[i : i + chunk_size]
+                    chunks.append(chunk)
+            else:
+                chunks = lst
+
+            print(chunks)
+            for chunk in chunks:
+                messages = "\n".join(f"\nURL: {url['program_url']}" for url in chunk)
+                new_programs_message = f"New programs added at {formatted_time}:\n{messages}"
+                msg = "```" + new_programs_message + "```"
+                discord.send_message(msg)
     
+    send_message(hackerone_lst)
+    send_message(intigriti_lst)
+    send_message(bugcrowd_lst)
 
-    # Send data to Discord
-    # client = discord.Client(intents=discord.Intents.default())
-
-    # logging.info('Sending data to discord...')
-    # log_messages = None
-
-    # @client.event
-    # async def on_ready():
-
-    #     logging.info('Bot is ready!')
-
-    #     channel = client.get_channel(1077715462957310144)
-    #     time = jdatetime.datetime.now().strftime("%a, %d %b %Y %H:%M")
-    bot_data = DiscordWebhook('https://discord.com/api/webhooks/1104150221103042590/Fs3Uz2Otib2FhfT7u2QpOqrmE2U78cuREHHZ6HrAtbKweBYBj55J9x33ZAx5Bl9MPaO4')
-    bot_logs = DiscordWebhook('https://discord.com/api/webhooks/1104151546620551179/-b59FL2OUOY1DA7e8AANKTRIlyh27lSnv05ChWF5QQB-3N6XzzI95cXQCtPy6dsUiyqx')
-    if lst:
-        for data in lst:
-            logging.info(f"Sending data to discord - {data}")
-            msg = f"""
-                ***Platform***: {data['platform']}
-                ***Name***: {data['program_name']}
-                ***Company***: {data['company_name']}
-                ***URL***: {data['program_url']}\n\n
-            """
-            bot_data.send_message(message_content)
-
-    if log_messages:
-        for msg in log_messages:
-            bot_logs.send_message(f"***{msg}***")
-
-    if not lst:
-        bot_logs.send_message("No new programs found!")
-
+    time = jdatetime.datetime.now().strftime("%a, %d %b %Y")
+    logging.info(f'Program finished at {time}')
 
 if __name__ == '__main__':
     main()
