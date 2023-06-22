@@ -71,6 +71,7 @@ class HackeroneScraper:
                     logging.error(f'Error happend while parsing data - {e}')
         try:
             Programs.objects.bulk_create(new_programs)
+            lst = [program.data for program in new_programs]
         except IntegrityError as e:
             logging.error(f'Error while bulk creating programs - {e}')
         return lst

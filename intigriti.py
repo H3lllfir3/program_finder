@@ -59,7 +59,7 @@ class Intigriti:
                 program_url = f'https://app.intigriti.com/researcher/programs/{company_handle}/{handle}/detail'
                 data = ProgramData(platform='Intigriti', program_name=handle, company_name=company_handle, program_url=program_url).dict()
 
-                if not data in list_of_programs_in_db:
+                if data not in list_of_programs_in_db:
                     new_programs.append(Programs(data=data))
 
             except Exception as e:
