@@ -20,10 +20,3 @@ class DiscordWebhook:
         else:
             print(f"Failed to send message. Status code: {response.status_code}")
             print(response.text)
-
-# if __name__ == "__main__":
-#     webhook_url = "YOUR_WEBHOOK_URL"  # Replace this with your webhook URL
-#     message_content = "Hello, Discord!"  # Replace this with the message you want to send
-
-#     discord_webhook = DiscordWebhook(webhook_url)
-#     discord_webhook.send_message(message_content, username="MyBot", avatar_url=None)
