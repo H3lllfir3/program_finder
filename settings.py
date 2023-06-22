@@ -15,7 +15,7 @@ DATABASES = {
     }
 }
 
-
+DISCORD = 'https://discord.com/api/webhooks/1104150221103042590/Fs3Uz2Otib2FhfT7u2QpOqrmE2U78cuREHHZ6HrAtbKweBYBj55J9x33ZAx5Bl9MPaO4'
 
 
 
