@@ -63,7 +63,7 @@ def main():
 
     def send_message(lst):
         if lst:
-            chunk_size = 14  # Number of URLs per message
+            chunk_size = 18  # Number of URLs per message
             chunks = []
             if len(lst) > chunk_size:
                 for i in range(0, len(lst), chunk_size):
@@ -74,7 +74,7 @@ def main():
 
             print(chunks)
             for chunk in chunks:
-                messages = "\n".join(f"\nURL: {url['program_url']}" for url in chunk)
+                messages = "\n".join(f"URL: {url['program_url']}" for url in chunk)
                 new_programs_message = f"New programs added at {formatted_time}:\n{messages}"
                 msg = "```" + new_programs_message + "```"
                 discord.send_message(msg)
