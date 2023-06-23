@@ -11,7 +11,7 @@ SECRET_KEY = 'LcULz8NMxj~za0[#gp.h4])1frv[jwasLcULz8NMxj~za0[#gp'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        "NAME": os.path.join(BASE_DIR, 'data', "db.sqlite3"),
     }
 }
 
