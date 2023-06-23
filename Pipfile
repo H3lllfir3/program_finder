@@ -9,6 +9,7 @@ discord = "*"
 requests = "*"
 django = "*"
 python-dotenv = "*"
+psycopg2 = "*"
 
 [dev-packages]
 
