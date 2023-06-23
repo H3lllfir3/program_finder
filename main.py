@@ -74,7 +74,7 @@ def main():
 
             print(chunks)
             for chunk in chunks:
-                messages = "\n".join(f"URL: {url['program_url']}" for url in chunk)
+                messages = "\n".join(f"URL: {url}" for url in chunk)
                 new_programs_message = f"New programs added at {formatted_time}:\n{messages}"
                 msg = "```" + new_programs_message + "```"
                 discord.send_message(msg)
