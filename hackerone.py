@@ -54,7 +54,7 @@ class HackeroneScraper:
         lst = []
         new_programs = []
         programs_in_db = Programs.objects.filter(data__platform='Hackerone')
-        list_of_programs_in_db = [program.data for program in programs_in_db]
+        list_of_programs_url = [program.data['program_url'] for program in programs_in_db]
         for program in programs:
             url = f"https://hackerone.com/{program['attributes']['handle'].lower()}"
             if program['attributes']['submission_state'] == 'open' and program['attributes']['state'] == 'public_mode':
@@ -65,13 +65,13 @@ class HackeroneScraper:
                         company_name=program['attributes']['name'].lower(),
                         program_url=url
                     ).dict()
-                    if data not in programs_in_db:
+                    if url not in list_of_programs_url:
                         new_programs.append(Programs(data=data))
                 except Exception as e:
                     logging.error(f'Error happend while parsing data - {e}')
         try:
             Programs.objects.bulk_create(new_programs)
-            lst = [program.data for program in new_programs]
+            lst = [program.data['program_url']  for program in new_programs]
         except IntegrityError as e:
             logging.error(f'Error while bulk creating programs - {e}')
         return lst

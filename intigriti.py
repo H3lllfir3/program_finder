@@ -51,7 +51,7 @@ class Intigriti:
         new_programs = []
         # list of programs which are already in the database.
         programs_in_db = Programs.objects.filter(data__platform='Intigriti')
-        list_of_programs_in_db = [program.data for program in programs_in_db]
+        list_of_programs_url = [program.data['program_url'] for program in programs_in_db]
         for program in programs_lst:
             try:
                 company_handle = program['companyHandle'].lower()
@@ -59,7 +59,7 @@ class Intigriti:
                 program_url = f'https://app.intigriti.com/researcher/programs/{company_handle}/{handle}/detail'
                 data = ProgramData(platform='Intigriti', program_name=handle, company_name=company_handle, program_url=program_url).dict()
 
-                if data not in list_of_programs_in_db:
+                if program_url not in list_of_programs_url:
                     new_programs.append(Programs(data=data))
 
             except Exception as e:
@@ -67,7 +67,7 @@ class Intigriti:
         
         try:
             Programs.objects.bulk_create(new_programs)
-            lst = [program.data for program in new_programs]
+            lst = [program.data['program_url']  for program in new_programs]
         except IntegrityError as e:
             logging.error(f'Error while bulk creating programs - {e}')
 

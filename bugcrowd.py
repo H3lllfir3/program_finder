@@ -47,7 +47,7 @@ class Bugcrowd:
         lst = []
         new_programs = []
         programs_in_db = Programs.objects.filter(data__platform='Bugcrowd')
-        list_of_programs_in_db = [program.data for program in programs_in_db]
+        list_of_programs_url = [program.data['program_url'] for program in programs_in_db]
         for program in programs:
             url = f'https://bugcrowd.com{program["program_url"]}'
             try:
@@ -55,13 +55,13 @@ class Bugcrowd:
                                        program_name=program['name'].lower(),
                                        company_name=program['tagline'].lower(),
                                        program_url=url).dict()
-                if program_data not in list_of_programs_in_db:
+                if url not in list_of_programs_url:
                     new_programs.append(Programs(data=program_data))
             except Exception as e:
                 logging.error(f'Error while parsing data - {e}')
         try:
             Programs.objects.bulk_create(new_programs)
-            lst = [program.data for program in new_programs]
+            lst = [program.data['program_url'] for program in new_programs]
         except IndentationError as e:
             logging.error(f'Error while bulk creating programs - {e}')
         return lst
