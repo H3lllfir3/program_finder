@@ -19,9 +19,11 @@ RUN touch /var/log/cron.log
 RUN chmod 0644 /etc/cron.d/crontab
 RUN /usr/bin/crontab /etc/cron.d/crontab
 
+
 RUN mkdir -p /app/data
-RUN chown -R root:root /app/data
 RUN chmod -R 755 /app/data
+RUN chown -R root:root /app/data
+# COPY /app/db.sqlite3 /app/data
 
 RUN python manage.py makemigrations && python manage.py migrate
 
