@@ -64,17 +64,23 @@ def main():
     def send_message(lst):
         if lst:
             chunk_size = 18  # Number of URLs per message
-            chunks = []
             if len(lst) > chunk_size:
-                for i in range(0, len(lst), chunk_size):
-                    chunk = lst[i : i + chunk_size]
-                    chunks.append(chunk)
-            else:
-                chunks = lst
+                chunks = []
+                if len(lst) > chunk_size:
+                    for i in range(0, len(lst), chunk_size):
+                        chunk = lst[i : i + chunk_size]
+                        chunks.append(chunk)
+                else:
+                    chunks = lst
 
-            print(chunks)
-            for chunk in chunks:
-                messages = "\n".join(f"URL: {url}" for url in chunk)
+                print(chunks)
+                for chunk in chunks:
+                    messages = "\n".join(f"URL: {url}" for url in chunk)
+                    new_programs_message = f"New programs added at {formatted_time}:\n{messages}"
+                    msg = "```" + new_programs_message + "```"
+                    discord.send_message(msg)
+            else:
+                messages = "\n".join(f"URL: {url}" for url in lst)
                 new_programs_message = f"New programs added at {formatted_time}:\n{messages}"
                 msg = "```" + new_programs_message + "```"
                 discord.send_message(msg)
